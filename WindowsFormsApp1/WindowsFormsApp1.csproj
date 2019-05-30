@@ -68,14 +68,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="Properties\DataSources\Board.datasource" />
-    <None Include="Properties\DataSources\EditTapForm.datasource" />
-    <None Include="Properties\DataSources\Form1.datasource" />
-    <None Include="Properties\DataSources\Program.datasource" />
-    <None Include="Properties\DataSources\Tab.datasource" />
     <None Include="Properties\DataSources\WindowsFormsApp1.Properties.Resources.datasource" />
     <None Include="Properties\DataSources\WindowsFormsApp1.Properties.Settings.datasource" />
-    <None Include="Properties\DataSources\Work.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
