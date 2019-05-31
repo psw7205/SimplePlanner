@@ -21,18 +21,22 @@ namespace SimplePlanner.Controller
 
         public void SendValue()
         {
+
             boardForm.CBoardForm.CurrentWork.WorkName = workForm.WorkName;
             boardForm.CBoardForm.CurrentWork.WorkContent = workForm.WorkContent;
-            boardForm.CBoardForm.CreateWork();
 
-            workForm.WorkName = "";
-            workForm.WorkContent = "";
+            if (!boardForm.CBoardForm.IsClicked)
+            {
+                boardForm.CBoardForm.CreateWork();
+            }
+            else
+            {
+                boardForm.CBoardForm.UpdateWork();
+            }
+
+            boardForm.CBoardForm.CurrentWork.WorkName = workForm.WorkName = "";
+            boardForm.CBoardForm.CurrentWork.WorkContent = workForm.WorkContent = "";
         }
 
-        public void LoadValue()
-        {
-            workForm.WorkName = boardForm.CBoardForm.CurrentWork.WorkName;
-            workForm.WorkContent = boardForm.CBoardForm.CurrentWork.WorkContent;
-        }
     }
 }

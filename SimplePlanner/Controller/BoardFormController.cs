@@ -17,7 +17,10 @@ namespace SimplePlanner.Controller
 
         public BoardData BoardData;
         public WorkData CurrentWork;
+        public Label CurrentLabel;
+
         public bool IsClicked;
+        public int WorkIndex;
 
         public BoardFormController(BoardForm _boardForm, WorkForm _workForm)
         {
@@ -32,13 +35,21 @@ namespace SimplePlanner.Controller
         {
             if(IsClicked)
             {
+                int tabIndex = boardForm.TabControl.SelectedIndex;
+                TabData tabData = BoardData.Tabs.ElementAt(tabIndex);
+
+                foreach (var item in tabData.Works)
+                {
+                    if (item.MyIndex == WorkIndex)
+                    {
+                        CurrentWork.WorkName = item.WorkName;
+                        CurrentWork.WorkContent = item.WorkContent;
+                        break;
+                    }
+                }
+
                 workForm.WorkName = CurrentWork.WorkName;
                 workForm.WorkContent = CurrentWork.WorkContent;
-            }
-            else
-            {
-                workForm.WorkName = CurrentWork.WorkName = "";
-                workForm.WorkContent = CurrentWork.WorkContent = "";
             }
 
             workForm.ShowDialog();
@@ -60,12 +71,23 @@ namespace SimplePlanner.Controller
             int tabIndex = boardForm.TabControl.SelectedIndex;
             TabData tabData = BoardData.Tabs.ElementAt(tabIndex);
             tabData.Works.Add(new WorkData(CurrentWork.WorkName, CurrentWork.WorkContent));
-            tabData.WorkUpdate(boardForm);
+            tabData.AddWork(boardForm);
+        }
 
-            if (!IsClicked)
+        public void UpdateWork()
+        {
+            int tabIndex = boardForm.TabControl.SelectedIndex;
+            TabData tabData = BoardData.Tabs.ElementAt(tabIndex);
+
+            foreach (var item in tabData.Works)
             {
-                CurrentWork.WorkName = "";
-                CurrentWork.WorkContent = "";
+                if(item.MyIndex == WorkIndex)
+                {
+                    item.WorkName = CurrentWork.WorkName;
+                    item.WorkContent = CurrentWork.WorkContent;
+                    item.UpdateWork(boardForm);
+                    break;
+                }
             }
         }
     }
