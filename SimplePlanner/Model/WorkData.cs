@@ -1,7 +1,6 @@
 ﻿using SimplePlanner.View;
 using System;
 using System.Drawing;
-using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace SimplePlanner.Model
