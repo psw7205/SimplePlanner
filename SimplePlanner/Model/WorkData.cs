@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 namespace SimplePlanner.Model
 {
     [Serializable]
-    class WorkData
+    public class WorkData
     {
-        public WorkData(string _name, string _content)
+        public WorkData(string _name = "", string _content = "")
         {
             WorkName = _name;
             WorkContent = _content;

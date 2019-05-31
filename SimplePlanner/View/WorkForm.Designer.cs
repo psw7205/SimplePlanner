@@ -30,9 +30,9 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.NameTextBox = new System.Windows.Forms.TextBox();
+            this.ContentTextBox = new System.Windows.Forms.TextBox();
+            this.OK = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -53,43 +53,45 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "일정 내용";
             // 
-            // textBox1
+            // NameTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(16, 32);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(340, 25);
-            this.textBox1.TabIndex = 2;
+            this.NameTextBox.Location = new System.Drawing.Point(16, 32);
+            this.NameTextBox.Name = "NameTextBox";
+            this.NameTextBox.Size = new System.Drawing.Size(340, 25);
+            this.NameTextBox.TabIndex = 2;
             // 
-            // textBox2
+            // ContentTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 103);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(344, 276);
-            this.textBox2.TabIndex = 3;
+            this.ContentTextBox.Location = new System.Drawing.Point(12, 103);
+            this.ContentTextBox.Multiline = true;
+            this.ContentTextBox.Name = "ContentTextBox";
+            this.ContentTextBox.Size = new System.Drawing.Size(344, 276);
+            this.ContentTextBox.TabIndex = 3;
             // 
-            // button1
+            // OK
             // 
-            this.button1.Location = new System.Drawing.Point(281, 385);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "OK";
-            this.button1.UseVisualStyleBackColor = true;
+            this.OK.Location = new System.Drawing.Point(281, 385);
+            this.OK.Name = "OK";
+            this.OK.Size = new System.Drawing.Size(75, 23);
+            this.OK.TabIndex = 4;
+            this.OK.Text = "OK";
+            this.OK.UseVisualStyleBackColor = true;
+            this.OK.Click += new System.EventHandler(this.OKBtn_Click);
             // 
             // WorkForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(368, 420);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.OK);
+            this.Controls.Add(this.ContentTextBox);
+            this.Controls.Add(this.NameTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "WorkForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "WorkForm";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -100,8 +102,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox NameTextBox;
+        private System.Windows.Forms.TextBox ContentTextBox;
+        private System.Windows.Forms.Button OK;
     }
 }

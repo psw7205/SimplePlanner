@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\BoardFormController.cs" />
+    <Compile Include="Controller\WorkFormController.cs" />
     <Compile Include="Model\BoardData.cs" />
     <Compile Include="Model\TabData.cs" />
     <Compile Include="Model\WorkData.cs" />
@@ -91,8 +93,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controller\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

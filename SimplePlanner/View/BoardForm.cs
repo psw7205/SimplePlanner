@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SimplePlanner.Controller;
+using SimplePlanner.View;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,13 +10,54 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SimplePlanner
+namespace SimplePlanner.View
 {
-    public partial class Form1 : Form
+    public partial class BoardForm : Form
     {
-        public Form1()
+        WorkForm workForm;
+
+        public BoardFormController CBoardForm;
+        public WorkFormController CWorkForm;
+
+        public Button CreateWorkBtn { get; }
+
+
+        public TabControl TabControl
+        {
+            get { return tabControl; }
+            set { tabControl = value; }
+        }
+
+        public BoardForm()
         {
             InitializeComponent();
+
+            workForm = new WorkForm();
+
+            CreateWorkBtn = new Button();
+            CreateWorkBtn.Size = new Size(100, 30);
+            CreateWorkBtn.Location = new Point(10, 10);
+            CreateWorkBtn.Text = "새 일정";
+            CreateWorkBtn.Name = "MakeNewWorkButton";
+            CreateWorkBtn.Click += (s, e) => {
+                CBoardForm.IsClicked = false;
+                CBoardForm.OpenWorkForm();
+            } ;
+
+            CBoardForm = new BoardFormController(this, workForm);
+            CWorkForm = new WorkFormController(this, workForm);
+
+            workForm.Link(CBoardForm, CWorkForm);
+        }
+
+        private void AddBtn_Click(object sender, EventArgs e)
+        {
+            CBoardForm.AddTab();
+        }
+
+        private void TabControl_Selected(object sender, TabControlEventArgs e)
+        {
+            CBoardForm.MoveCreateWorkBtn();
         }
     }
 }
