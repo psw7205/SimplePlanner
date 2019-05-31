@@ -1,5 +1,6 @@
 ﻿using SimplePlanner.View;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace SimplePlanner.Model
@@ -23,9 +24,25 @@ namespace SimplePlanner.Model
         public string WorkName { get; set; }
         public string WorkContent { get; set; }
 
-        public void Update(BoardForm boardForm)
+        public void LabelTextUpdate(BoardForm boardForm)
         {
-            boardForm.CBoardForm.CurrentLabel.Text = this.WorkName;
+            Label label = boardForm.CBoardForm.CurrentLabel;
+            label.Text = this.WorkName;
+        }
+
+        public static void Update(BoardForm boardForm)
+        {
+            TabPage tab = boardForm.TabControl.SelectedTab;
+            int i = 0;
+            foreach (var item in tab.Controls)
+            {
+                Label tmp = item as Label;
+                if (tmp != null)
+                {
+                    tmp.Location = new Point(5, 50 + (35 * i));
+                    i++;
+                }
+            }
         }
 
         public void Delete(BoardForm boardForm)

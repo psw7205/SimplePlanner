@@ -76,11 +76,6 @@ namespace SimplePlanner.Controller
             }
         }
 
-        public void DelLabel()
-        {
-
-        }
-
         public void MoveBtn()
         {
             boardForm.TabControl.SelectedTab.Controls.Add(boardForm.CreateWorkBtn);
@@ -113,7 +108,7 @@ namespace SimplePlanner.Controller
                 {
                     item.WorkName = CurrentWork.WorkName;
                     item.WorkContent = CurrentWork.WorkContent;
-                    item.Update(boardForm);
+                    item.LabelTextUpdate(boardForm);
                     break;
                 }
             }

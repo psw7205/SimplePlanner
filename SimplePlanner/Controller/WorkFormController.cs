@@ -21,7 +21,8 @@ namespace SimplePlanner.Controller
             int workIdx = boardForm.CBoardForm.WorkIndex - 1;
 
             data.Tabs[tabIdx].Works[workIdx].Delete(boardForm);
-            data.Tabs[tabIdx].Works.RemoveAt(workIdx);     
+            data.Tabs[tabIdx].Works.RemoveAt(workIdx);
+            WorkData.Update(boardForm);
         }
 
         public void SendValue()

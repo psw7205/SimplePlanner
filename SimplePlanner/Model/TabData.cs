@@ -21,11 +21,6 @@ namespace SimplePlanner.Model
         public string TabName { get; set; }
         public List<WorkData> Works { get; set; }
 
-        public void DelWorkLabel(BoardForm boardForm)
-        {
-
-        }
-
         public void AddWorkLabel(BoardForm boardForm)
         {
             int tabIndex = boardForm.TabControl.SelectedIndex;

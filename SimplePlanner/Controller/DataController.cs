@@ -17,12 +17,13 @@ namespace SimplePlanner.Controller
             foreach (var tab in board.Tabs)
             {
                 BoardForm.CBoardForm.BoardData.AddTab(BoardForm);
-                int i = 0;
+                int i = 0, j = 0;
                 foreach (var item in tab.Works)
                 {
-                    BoardForm.CBoardForm.BoardData.Tabs[i].InitWorkLabel(BoardForm, item, i);
-                    i++;
+                    BoardForm.CBoardForm.BoardData.Tabs[i].InitWorkLabel(BoardForm, item, j);
+                    j++;
                 }
+                i++;
             }
         }
 
