@@ -31,9 +31,19 @@ namespace SimplePlanner.Controller
             IsClicked = false;
         }
 
+        public void init()
+        {
+            BoardData.Tabs.Add(new TabData("To do"));
+            BoardData.AddTab(boardForm, "To do");
+            BoardData.Tabs.Add(new TabData("Doing"));
+            BoardData.AddTab(boardForm, "Doing");
+            BoardData.Tabs.Add(new TabData("Done"));
+            BoardData.AddTab(boardForm, "Done");
+        }
+
         public void OpenWorkForm()
         {
-            if(IsClicked)
+            if (IsClicked)
             {
                 int tabIndex = boardForm.TabControl.SelectedIndex;
                 TabData tabData = BoardData.Tabs.ElementAt(tabIndex);
@@ -55,15 +65,25 @@ namespace SimplePlanner.Controller
             workForm.ShowDialog();
         }
 
-        public void AddTab()
+        public void AddTabData()
         {
             BoardData.Tabs.Add(new TabData("New Tab"));
-            BoardData.TabUpdate(boardForm);
+            BoardData.AddTab(boardForm);
         }
 
-        public void MoveCreateWorkBtn()
+        public void DelTabData()
+        {
+            if (boardForm.TabControl.TabCount > 1)
+            {
+                BoardData.Tabs.RemoveAt(boardForm.TabControl.SelectedIndex);
+                BoardData.DelTab(boardForm);
+            }
+        }
+
+        public void MoveBtn()
         {
             boardForm.TabControl.SelectedTab.Controls.Add(boardForm.CreateWorkBtn);
+            boardForm.TabControl.SelectedTab.Controls.Add(boardForm.DeleteWorkBtn);
         }
 
         public void CreateWork()
@@ -81,7 +101,7 @@ namespace SimplePlanner.Controller
 
             foreach (var item in tabData.Works)
             {
-                if(item.MyIndex == WorkIndex)
+                if (item.MyIndex == WorkIndex)
                 {
                     item.WorkName = CurrentWork.WorkName;
                     item.WorkContent = CurrentWork.WorkContent;

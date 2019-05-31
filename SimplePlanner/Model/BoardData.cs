@@ -20,13 +20,20 @@ namespace SimplePlanner.Model
         public string BoardName { get; set; }
         public List<TabData> Tabs { get; set; }
 
-        public void TabUpdate(BoardForm boardForm)
+        public void AddTab(BoardForm boardForm, string name = "New Tab")
         {
-            TabPage tabPage = new TabPage("New Tab");
+            TabPage tabPage = new TabPage(name);
             tabPage.UseVisualStyleBackColor = true;
             tabPage.Controls.Add(boardForm.CreateWorkBtn);
+            tabPage.Controls.Add(boardForm.DeleteWorkBtn);
             boardForm.TabControl.TabPages.Add(tabPage);
             boardForm.TabControl.SelectedTab = boardForm.TabControl.TabPages[boardForm.TabControl.TabCount - 1];
         }
+
+        public void DelTab(BoardForm boardForm)
+        {
+            boardForm.TabControl.TabPages.Remove(boardForm.TabControl.SelectedTab);
+        }
+
     }
 }

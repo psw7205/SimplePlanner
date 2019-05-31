@@ -32,6 +32,7 @@
             this.AddBtn = new System.Windows.Forms.Button();
             this.EditBtn = new System.Windows.Forms.Button();
             this.tabControl = new System.Windows.Forms.TabControl();
+            this.DelBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // boardName
@@ -72,11 +73,22 @@
             this.tabControl.TabIndex = 0;
             this.tabControl.Selected += new System.Windows.Forms.TabControlEventHandler(this.TabControl_Selected);
             // 
+            // DelBtn
+            // 
+            this.DelBtn.Location = new System.Drawing.Point(317, 12);
+            this.DelBtn.Name = "DelBtn";
+            this.DelBtn.Size = new System.Drawing.Size(75, 23);
+            this.DelBtn.TabIndex = 4;
+            this.DelBtn.Text = "DEL";
+            this.DelBtn.UseVisualStyleBackColor = true;
+            this.DelBtn.Click += new System.EventHandler(this.DelBtn_Click);
+            // 
             // BoardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.DelBtn);
             this.Controls.Add(this.EditBtn);
             this.Controls.Add(this.AddBtn);
             this.Controls.Add(this.boardName);
@@ -96,6 +108,7 @@
         private System.Windows.Forms.Button AddBtn;
         private System.Windows.Forms.Button EditBtn;
         private System.Windows.Forms.TabControl tabControl;
+        private System.Windows.Forms.Button DelBtn;
     }
 }
 

@@ -24,6 +24,7 @@ namespace SimplePlanner.View
         public DataController CData;
 
         public Button CreateWorkBtn { get; }
+        public Button DeleteWorkBtn { get; }
 
 
         public TabControl TabControl
@@ -49,6 +50,17 @@ namespace SimplePlanner.View
                 CBoardForm.OpenWorkForm();
             };
 
+            DeleteWorkBtn = new Button();
+            DeleteWorkBtn.Size = new Size(100, 30);
+            DeleteWorkBtn.Location = new Point(120, 10);
+            DeleteWorkBtn.Text = "일정 삭제";
+            DeleteWorkBtn.Name = "DeleteWorkButton";
+            DeleteWorkBtn.Click += (s, e) => {
+                /*
+                 CBoardForm.DeleteWork();
+                */
+            };
+
             CBoardForm = new BoardFormController(this, workForm);
             CWorkForm = new WorkFormController(this, workForm);
             CTabForm = new TabEditFormController(this, tabEditForm);
@@ -61,19 +73,23 @@ namespace SimplePlanner.View
             if (tmp != null)
             {
                 CBoardForm.BoardData = tmp;
+                CData.init(this);
+            }
+            else
+            {
+                CBoardForm.init();
             }
 
-            CData.init(this);
         }
 
         private void AddBtn_Click(object sender, EventArgs e)
         {
-            CBoardForm.AddTab();
+            CBoardForm.AddTabData();
         }
 
         private void TabControl_Selected(object sender, TabControlEventArgs e)
         {
-            CBoardForm.MoveCreateWorkBtn();
+            CBoardForm.MoveBtn();
         }
 
         private void BoardForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -84,6 +100,11 @@ namespace SimplePlanner.View
         private void EditBtn_Click(object sender, EventArgs e)
         {
             CTabForm.OpenTabEditForm();
+        }
+
+        private void DelBtn_Click(object sender, EventArgs e)
+        {
+            CBoardForm.DelTabData();
         }
     }
 }
