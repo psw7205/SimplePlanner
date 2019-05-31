@@ -37,5 +37,11 @@ namespace SimplePlanner.View
             CWorkForm.SendValue();
             this.Close();
         }
+
+        private void DelBtn_Click(object sender, EventArgs e)
+        {
+            CWorkForm.DeleteWork();
+            this.Close();
+        }
     }
 }

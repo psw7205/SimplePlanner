@@ -1,6 +1,7 @@
 ﻿using SimplePlanner.Model;
 using SimplePlanner.View;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace SimplePlanner.Controller
@@ -75,10 +76,14 @@ namespace SimplePlanner.Controller
             }
         }
 
+        public void DelLabel()
+        {
+
+        }
+
         public void MoveBtn()
         {
             boardForm.TabControl.SelectedTab.Controls.Add(boardForm.CreateWorkBtn);
-            boardForm.TabControl.SelectedTab.Controls.Add(boardForm.DeleteWorkBtn);
         }
 
         public void CreateWork()
@@ -86,7 +91,15 @@ namespace SimplePlanner.Controller
             int tabIndex = boardForm.TabControl.SelectedIndex;
             TabData tabData = BoardData.Tabs.ElementAt(tabIndex);
             tabData.Works.Add(new WorkData(CurrentWork.WorkName, CurrentWork.WorkContent));
-            tabData.AddWork(boardForm);
+            tabData.AddWorkLabel(boardForm);
+        }
+
+        public void LabelClick(Label label)
+        {
+            IsClicked = true;
+            CurrentLabel = label;
+            WorkIndex = int.Parse(Regex.Replace(CurrentLabel.Name, @"\D", ""));
+            OpenWorkForm();
         }
 
         public void UpdateWork()

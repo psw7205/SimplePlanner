@@ -17,8 +17,6 @@ namespace SimplePlanner.View
         public DataController CData;
 
         public Button CreateWorkBtn { get; }
-        public Button DeleteWorkBtn { get; }
-
 
         public TabControl TabControl
         {
@@ -44,18 +42,7 @@ namespace SimplePlanner.View
                 CBoardForm.OpenWorkForm();
             };
 
-            DeleteWorkBtn = new Button();
-            DeleteWorkBtn.Size = new Size(100, 30);
-            DeleteWorkBtn.Location = new Point(120, 10);
-            DeleteWorkBtn.Text = "일정 삭제";
-            DeleteWorkBtn.Name = "DeleteWorkButton";
-            DeleteWorkBtn.Click += (s, e) =>
-            {
-                /*
-                 CBoardForm.DeleteWork();
-                */
-            };
-
+        
             CBoardForm = new BoardFormController(this, workForm);
             CWorkForm = new WorkFormController(this, workForm);
             CTabForm = new TabEditFormController(this, tabEditForm);

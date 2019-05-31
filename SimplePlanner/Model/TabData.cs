@@ -21,9 +21,12 @@ namespace SimplePlanner.Model
         public string TabName { get; set; }
         public List<WorkData> Works { get; set; }
 
+        public void DelWorkLabel(BoardForm boardForm)
+        {
 
+        }
 
-        public void AddWork(BoardForm boardForm)
+        public void AddWorkLabel(BoardForm boardForm)
         {
             int tabIndex = boardForm.TabControl.SelectedIndex;
             TabPage tabPage = boardForm.TabControl.TabPages[tabIndex];
@@ -38,17 +41,13 @@ namespace SimplePlanner.Model
 
             newWork.Click += (s, e) =>
             {
-                Label tmp = (Label)s;
-                boardForm.CBoardForm.IsClicked = true;
-                boardForm.CBoardForm.WorkIndex = int.Parse(Regex.Replace(tmp.Name, @"\D", ""));
-                boardForm.CBoardForm.CurrentLabel = tmp;
-                boardForm.CBoardForm.OpenWorkForm();
+                boardForm.CBoardForm.LabelClick((Label)s);
             };
 
             tabPage.Controls.Add(newWork);
         }
 
-        public void WorkUpdate(BoardForm boardForm, WorkData workData, int i)
+        public void InitWorkLabel(BoardForm boardForm, WorkData workData, int i)
         {
             int tabIndex = boardForm.TabControl.SelectedIndex;
             TabPage tabPage = boardForm.TabControl.TabPages[tabIndex];
@@ -63,11 +62,7 @@ namespace SimplePlanner.Model
 
             newWork.Click += (s, e) =>
             {
-                Label tmp = (Label)s;
-                boardForm.CBoardForm.IsClicked = true;
-                boardForm.CBoardForm.WorkIndex = int.Parse(Regex.Replace(tmp.Name, @"\D", ""));
-                boardForm.CBoardForm.CurrentLabel = tmp;
-                boardForm.CBoardForm.OpenWorkForm();
+                boardForm.CBoardForm.LabelClick((Label)s);
             };
 
             tabPage.Controls.Add(newWork);

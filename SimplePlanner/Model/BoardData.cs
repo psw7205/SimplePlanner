@@ -22,7 +22,6 @@ namespace SimplePlanner.Model
             TabPage tabPage = new TabPage(name);
             tabPage.UseVisualStyleBackColor = true;
             tabPage.Controls.Add(boardForm.CreateWorkBtn);
-            tabPage.Controls.Add(boardForm.DeleteWorkBtn);
             boardForm.TabControl.TabPages.Add(tabPage);
             boardForm.TabControl.SelectedTab = boardForm.TabControl.TabPages[boardForm.TabControl.TabCount - 1];
         }

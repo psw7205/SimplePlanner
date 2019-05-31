@@ -20,7 +20,7 @@ namespace SimplePlanner.Controller
                 int i = 0;
                 foreach (var item in tab.Works)
                 {
-                    BoardForm.CBoardForm.BoardData.Tabs[i].WorkUpdate(BoardForm, item, i);
+                    BoardForm.CBoardForm.BoardData.Tabs[i].InitWorkLabel(BoardForm, item, i);
                     i++;
                 }
             }

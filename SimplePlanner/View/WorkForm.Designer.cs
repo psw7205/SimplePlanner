@@ -33,6 +33,7 @@
             this.NameTextBox = new System.Windows.Forms.TextBox();
             this.ContentTextBox = new System.Windows.Forms.TextBox();
             this.OK = new System.Windows.Forms.Button();
+            this.DelBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -70,7 +71,7 @@
             // 
             // OK
             // 
-            this.OK.Location = new System.Drawing.Point(281, 385);
+            this.OK.Location = new System.Drawing.Point(200, 385);
             this.OK.Name = "OK";
             this.OK.Size = new System.Drawing.Size(75, 23);
             this.OK.TabIndex = 4;
@@ -78,11 +79,22 @@
             this.OK.UseVisualStyleBackColor = true;
             this.OK.Click += new System.EventHandler(this.OKBtn_Click);
             // 
+            // DelBtn
+            // 
+            this.DelBtn.Location = new System.Drawing.Point(281, 385);
+            this.DelBtn.Name = "DelBtn";
+            this.DelBtn.Size = new System.Drawing.Size(75, 23);
+            this.DelBtn.TabIndex = 5;
+            this.DelBtn.Text = "DEL";
+            this.DelBtn.UseVisualStyleBackColor = true;
+            this.DelBtn.Click += new System.EventHandler(this.DelBtn_Click);
+            // 
             // WorkForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(368, 420);
+            this.Controls.Add(this.DelBtn);
             this.Controls.Add(this.OK);
             this.Controls.Add(this.ContentTextBox);
             this.Controls.Add(this.NameTextBox);
@@ -105,5 +117,6 @@
         private System.Windows.Forms.TextBox NameTextBox;
         private System.Windows.Forms.TextBox ContentTextBox;
         private System.Windows.Forms.Button OK;
+        private System.Windows.Forms.Button DelBtn;
     }
 }

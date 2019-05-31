@@ -1,4 +1,5 @@
-﻿using SimplePlanner.View;
+﻿using SimplePlanner.Model;
+using SimplePlanner.View;
 
 namespace SimplePlanner.Controller
 {
@@ -13,10 +14,18 @@ namespace SimplePlanner.Controller
             workForm = _workForm;
         }
 
+        public void DeleteWork()
+        {
+            BoardData data = boardForm.CBoardForm.BoardData;
+            int tabIdx = boardForm.TabControl.SelectedIndex;
+            int workIdx = boardForm.CBoardForm.WorkIndex - 1;
+
+            data.Tabs[tabIdx].Works[workIdx].Delete(boardForm);
+            data.Tabs[tabIdx].Works.RemoveAt(workIdx);     
+        }
 
         public void SendValue()
         {
-
             boardForm.CBoardForm.CurrentWork.WorkName = workForm.WorkName;
             boardForm.CBoardForm.CurrentWork.WorkContent = workForm.WorkContent;
 
