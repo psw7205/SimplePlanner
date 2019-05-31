@@ -12,6 +12,7 @@ namespace SimplePlanner.Model
     {
         public static int Index;
         public int MyIndex;
+
         public WorkData(string _name = "", string _content = "")
         {
             WorkName = _name;
@@ -23,7 +24,7 @@ namespace SimplePlanner.Model
         public string WorkName { get; set; }
         public string WorkContent { get; set; }
 
-        public void UpdateWork(BoardForm boardForm)
+        public void Update(BoardForm boardForm)
         {
             boardForm.CBoardForm.CurrentLabel.Text = this.WorkName;
         }

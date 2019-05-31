@@ -1,4 +1,5 @@
 ﻿using SimplePlanner.Controller;
+using SimplePlanner.Model;
 using SimplePlanner.View;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,7 @@ namespace SimplePlanner.View
 
         public BoardFormController CBoardForm;
         public WorkFormController CWorkForm;
+        public DataController CData;
 
         public Button CreateWorkBtn { get; }
 
@@ -42,12 +44,21 @@ namespace SimplePlanner.View
             CreateWorkBtn.Click += (s, e) => {
                 CBoardForm.IsClicked = false;
                 CBoardForm.OpenWorkForm();
-            } ;
+            };
 
             CBoardForm = new BoardFormController(this, workForm);
             CWorkForm = new WorkFormController(this, workForm);
 
             workForm.Link(CBoardForm, CWorkForm);
+
+            CData = new DataController();
+            BoardData tmp = CData.DeserializeData();
+            if (tmp != null)
+            {
+                CBoardForm.BoardData = tmp;
+            }
+
+            CData.init(this);
         }
 
         private void AddBtn_Click(object sender, EventArgs e)
@@ -58,6 +69,11 @@ namespace SimplePlanner.View
         private void TabControl_Selected(object sender, TabControlEventArgs e)
         {
             CBoardForm.MoveCreateWorkBtn();
+        }
+
+        private void BoardForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            CData.SerializeData(CBoardForm.BoardData);
         }
     }
 }

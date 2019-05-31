@@ -85,7 +85,7 @@ namespace SimplePlanner.Controller
                 {
                     item.WorkName = CurrentWork.WorkName;
                     item.WorkContent = CurrentWork.WorkContent;
-                    item.UpdateWork(boardForm);
+                    item.Update(boardForm);
                     break;
                 }
             }

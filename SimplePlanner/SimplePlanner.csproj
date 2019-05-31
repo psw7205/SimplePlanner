@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\BoardFormController.cs" />
+    <Compile Include="Controller\DataController.cs" />
     <Compile Include="Controller\WorkFormController.cs" />
     <Compile Include="Model\BoardData.cs" />
     <Compile Include="Model\TabData.cs" />
