@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
-using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 
@@ -26,13 +25,15 @@ namespace SimplePlanner.Model
             int tabIndex = boardForm.TabControl.SelectedIndex;
             TabPage tabPage = boardForm.TabControl.TabPages[tabIndex];
 
-            Label newWork = new Label();
-            newWork.Name = "Work" + Works.Last().MyIndex;
-            newWork.Text = Works.Last().WorkName;
-            newWork.Size = new Size(100, 30);
-            newWork.Location = new Point(5, 50 + (35 * (Works.Count - 1)));
-            newWork.BorderStyle = BorderStyle.FixedSingle;
-            newWork.TextAlign = ContentAlignment.MiddleCenter;
+            Label newWork = new Label
+            {
+                Name = "Work" + Works.Last().MyIndex,
+                Text = Works.Last().WorkName,
+                Size = new Size(100, 30),
+                Location = new Point(5, 50 + (35 * (Works.Count - 1))),
+                BorderStyle = BorderStyle.FixedSingle,
+                TextAlign = ContentAlignment.MiddleCenter
+            };
 
             newWork.Click += (s, e) =>
             {
@@ -47,13 +48,15 @@ namespace SimplePlanner.Model
             int tabIndex = boardForm.TabControl.SelectedIndex;
             TabPage tabPage = boardForm.TabControl.TabPages[tabIndex];
 
-            Label newWork = new Label();
-            newWork.Name = "Work" + workData.MyIndex;
-            newWork.Text = workData.WorkName;
-            newWork.Size = new Size(100, 30);
-            newWork.Location = new Point(5, 50 + (35 * i));
-            newWork.BorderStyle = BorderStyle.FixedSingle;
-            newWork.TextAlign = ContentAlignment.MiddleCenter;
+            Label newWork = new Label
+            {
+                Name = "Work" + workData.MyIndex,
+                Text = workData.WorkName,
+                Size = new Size(100, 30),
+                Location = new Point(5, 50 + (35 * i)),
+                BorderStyle = BorderStyle.FixedSingle,
+                TextAlign = ContentAlignment.MiddleCenter
+            };
 
             newWork.Click += (s, e) =>
             {

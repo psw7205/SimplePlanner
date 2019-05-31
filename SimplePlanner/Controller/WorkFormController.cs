@@ -5,8 +5,8 @@ namespace SimplePlanner.Controller
 {
     public class WorkFormController
     {
-        BoardForm boardForm;
-        WorkForm workForm;
+        readonly BoardForm boardForm;
+        readonly WorkForm workForm;
 
         public WorkFormController(BoardForm _boardForm, WorkForm _workForm)
         {
@@ -18,10 +18,21 @@ namespace SimplePlanner.Controller
         {
             BoardData data = boardForm.CBoardForm.BoardData;
             int tabIdx = boardForm.TabControl.SelectedIndex;
-            int workIdx = boardForm.CBoardForm.WorkIndex - 1;
 
-            data.Tabs[tabIdx].Works[workIdx].Delete(boardForm);
-            data.Tabs[tabIdx].Works.RemoveAt(workIdx);
+            WorkData.Delete(boardForm);
+
+            WorkData tmp = null;
+            foreach (var item in data.Tabs[tabIdx].Works)
+            {
+                if (item.MyIndex == boardForm.CBoardForm.WorkIndex)
+                {
+                    tmp = item;
+                    break;
+                }
+            }
+
+            data.Tabs[tabIdx].Works.Remove(tmp);
+
             WorkData.Update(boardForm);
         }
 

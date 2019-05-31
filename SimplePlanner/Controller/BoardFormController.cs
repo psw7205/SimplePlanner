@@ -8,8 +8,8 @@ namespace SimplePlanner.Controller
 {
     public class BoardFormController
     {
-        BoardForm boardForm;
-        WorkForm workForm;
+        readonly BoardForm boardForm;
+        readonly WorkForm workForm;
 
         public BoardData BoardData;
         public WorkData CurrentWork;
@@ -27,7 +27,7 @@ namespace SimplePlanner.Controller
             IsClicked = false;
         }
 
-        public void init()
+        public void Init()
         {
             BoardData.Tabs.Add(new TabData("To do"));
             BoardData.AddTab(boardForm, "To do");
@@ -61,10 +61,10 @@ namespace SimplePlanner.Controller
             workForm.ShowDialog();
         }
 
-        public void AddTabData()
+        public void AddTabData(string name = "New Tab")
         {
-            BoardData.Tabs.Add(new TabData("New Tab"));
-            BoardData.AddTab(boardForm);
+            BoardData.Tabs.Add(new TabData(name));
+            BoardData.AddTab(boardForm, name);
         }
 
         public void DelTabData()

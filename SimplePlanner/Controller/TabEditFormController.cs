@@ -4,24 +4,30 @@ namespace SimplePlanner.Controller
 {
     public class TabEditFormController
     {
-        BoardForm boardForm;
-        TabEditForm tabEditForm;
+        readonly BoardForm boardForm;
+        readonly TabEditForm tabEditForm;
+        public bool flag;
 
         public TabEditFormController(BoardForm _boardForm, TabEditForm _TabEdit)
         {
             boardForm = _boardForm;
             tabEditForm = _TabEdit;
+            flag = true;
         }
 
         public void UpdateTabName()
         {
-            boardForm.TabControl.SelectedTab.Text = tabEditForm.TabName;
-            tabEditForm.TabName = "";
+            if (flag)
+            {
+                boardForm.TabControl.SelectedTab.Text = tabEditForm.TabName;
+            }
         }
 
-        public void OpenTabEditForm()
+        public string OpenTabEditForm()
         {
+            tabEditForm.TabName = "";
             tabEditForm.ShowDialog();
+            return tabEditForm.TabName;
         }
     }
 }

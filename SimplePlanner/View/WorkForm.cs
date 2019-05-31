@@ -6,7 +6,6 @@ namespace SimplePlanner.View
 {
     public partial class WorkForm : Form
     {
-        BoardFormController CBoardForm;
         WorkFormController CWorkForm;
 
         public string WorkName
@@ -26,21 +25,28 @@ namespace SimplePlanner.View
             InitializeComponent();
         }
 
-        public void Link(BoardFormController _CBoardForm, WorkFormController _CWorkForm)
+        public void Link(WorkFormController _CWorkForm)
         {
-            CBoardForm = _CBoardForm;
             CWorkForm = _CWorkForm;
         }
 
         private void OKBtn_Click(object sender, EventArgs e)
         {
-            CWorkForm.SendValue();
+            if (WorkName != "" && WorkContent != "")
+            {
+                CWorkForm.SendValue();
+            }
+
             this.Close();
         }
 
         private void DelBtn_Click(object sender, EventArgs e)
         {
-            CWorkForm.DeleteWork();
+            if (WorkName != "" && WorkContent != "")
+            {
+                CWorkForm.DeleteWork();
+            }
+            
             this.Close();
         }
     }

@@ -26,6 +26,7 @@ namespace SimplePlanner.View
         private void Button1_Click(object sender, EventArgs e)
         {
             CTabEditForm.UpdateTabName();
+
             this.Close();
         }
     }

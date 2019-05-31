@@ -8,8 +8,8 @@ namespace SimplePlanner.View
 {
     public partial class BoardForm : Form
     {
-        WorkForm workForm;
-        TabEditForm tabEditForm;
+        readonly WorkForm workForm;
+        readonly TabEditForm tabEditForm;
 
         public BoardFormController CBoardForm;
         public WorkFormController CWorkForm;
@@ -31,23 +31,26 @@ namespace SimplePlanner.View
             workForm = new WorkForm();
             tabEditForm = new TabEditForm();
 
-            CreateWorkBtn = new Button();
-            CreateWorkBtn.Size = new Size(100, 30);
-            CreateWorkBtn.Location = new Point(10, 10);
-            CreateWorkBtn.Text = "새 일정";
-            CreateWorkBtn.Name = "MakeNewWorkButton";
+            CreateWorkBtn = new Button
+            {
+                Size = new Size(100, 30),
+                Location = new Point(10, 10),
+                Text = "새 일정",
+                Name = "MakeNewWorkButton"
+            };
+
             CreateWorkBtn.Click += (s, e) =>
             {
                 CBoardForm.IsClicked = false;
                 CBoardForm.OpenWorkForm();
             };
 
-        
+
             CBoardForm = new BoardFormController(this, workForm);
             CWorkForm = new WorkFormController(this, workForm);
             CTabForm = new TabEditFormController(this, tabEditForm);
 
-            workForm.Link(CBoardForm, CWorkForm);
+            workForm.Link(CWorkForm);
             tabEditForm.Link(CTabForm);
 
             CData = new DataController();
@@ -55,18 +58,20 @@ namespace SimplePlanner.View
             if (tmp != null)
             {
                 CBoardForm.BoardData = tmp;
-                CData.init(this);
+                CData.Init(this);
             }
             else
             {
-                CBoardForm.init();
+                CBoardForm.Init();
             }
 
         }
 
         private void AddBtn_Click(object sender, EventArgs e)
         {
-            CBoardForm.AddTabData();
+            CTabForm.flag = false;
+            string name = CTabForm.OpenTabEditForm();
+            CBoardForm.AddTabData(name);
         }
 
         private void TabControl_Selected(object sender, TabControlEventArgs e)
@@ -81,6 +86,7 @@ namespace SimplePlanner.View
 
         private void EditBtn_Click(object sender, EventArgs e)
         {
+            CTabForm.flag = true;
             CTabForm.OpenTabEditForm();
         }
 

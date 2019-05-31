@@ -19,8 +19,11 @@ namespace SimplePlanner.Model
 
         public void AddTab(BoardForm boardForm, string name = "New Tab")
         {
-            TabPage tabPage = new TabPage(name);
-            tabPage.UseVisualStyleBackColor = true;
+            TabPage tabPage = new TabPage(name)
+            {
+                UseVisualStyleBackColor = true
+            };
+
             tabPage.Controls.Add(boardForm.CreateWorkBtn);
             boardForm.TabControl.TabPages.Add(tabPage);
             boardForm.TabControl.SelectedTab = boardForm.TabControl.TabPages[boardForm.TabControl.TabCount - 1];

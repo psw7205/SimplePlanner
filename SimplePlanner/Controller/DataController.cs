@@ -8,21 +8,22 @@ namespace SimplePlanner.Controller
 {
     public class DataController
     {
-        private string Filename = @"./test.dat";
+        private readonly string Filename = @"./test.dat";
 
-        public void init(BoardForm BoardForm)
+        public void Init(BoardForm BoardForm)
         {
             BoardData board = BoardForm.CBoardForm.BoardData;
 
+            int i = 0, j = 0;
             foreach (var tab in board.Tabs)
             {
-                BoardForm.CBoardForm.BoardData.AddTab(BoardForm);
-                int i = 0, j = 0;
+                BoardForm.CBoardForm.BoardData.AddTab(BoardForm, tab.TabName);
                 foreach (var item in tab.Works)
                 {
                     BoardForm.CBoardForm.BoardData.Tabs[i].InitWorkLabel(BoardForm, item, j);
                     j++;
                 }
+                j = 0;
                 i++;
             }
         }
