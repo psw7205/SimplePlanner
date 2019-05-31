@@ -16,9 +16,11 @@ namespace SimplePlanner.View
     public partial class BoardForm : Form
     {
         WorkForm workForm;
+        TabEditForm tabEditForm;
 
         public BoardFormController CBoardForm;
         public WorkFormController CWorkForm;
+        public TabEditFormController CTabForm;
         public DataController CData;
 
         public Button CreateWorkBtn { get; }
@@ -35,6 +37,7 @@ namespace SimplePlanner.View
             InitializeComponent();
 
             workForm = new WorkForm();
+            tabEditForm = new TabEditForm();
 
             CreateWorkBtn = new Button();
             CreateWorkBtn.Size = new Size(100, 30);
@@ -48,8 +51,10 @@ namespace SimplePlanner.View
 
             CBoardForm = new BoardFormController(this, workForm);
             CWorkForm = new WorkFormController(this, workForm);
+            CTabForm = new TabEditFormController(this, tabEditForm);
 
             workForm.Link(CBoardForm, CWorkForm);
+            tabEditForm.Link(CTabForm);
 
             CData = new DataController();
             BoardData tmp = CData.DeserializeData();
@@ -74,6 +79,11 @@ namespace SimplePlanner.View
         private void BoardForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             CData.SerializeData(CBoardForm.BoardData);
+        }
+
+        private void EditBtn_Click(object sender, EventArgs e)
+        {
+            CTabForm.OpenTabEditForm();
         }
     }
 }

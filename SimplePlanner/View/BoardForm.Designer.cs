@@ -61,6 +61,7 @@
             this.EditBtn.TabIndex = 3;
             this.EditBtn.Text = "EDIT";
             this.EditBtn.UseVisualStyleBackColor = true;
+            this.EditBtn.Click += new System.EventHandler(this.EditBtn_Click);
             // 
             // tabControl
             // 
