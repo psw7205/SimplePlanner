@@ -1,14 +1,7 @@
 ﻿using SimplePlanner.Controller;
 using SimplePlanner.Model;
-using SimplePlanner.View;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SimplePlanner.View
@@ -45,7 +38,8 @@ namespace SimplePlanner.View
             CreateWorkBtn.Location = new Point(10, 10);
             CreateWorkBtn.Text = "새 일정";
             CreateWorkBtn.Name = "MakeNewWorkButton";
-            CreateWorkBtn.Click += (s, e) => {
+            CreateWorkBtn.Click += (s, e) =>
+            {
                 CBoardForm.IsClicked = false;
                 CBoardForm.OpenWorkForm();
             };
@@ -55,7 +49,8 @@ namespace SimplePlanner.View
             DeleteWorkBtn.Location = new Point(120, 10);
             DeleteWorkBtn.Text = "일정 삭제";
             DeleteWorkBtn.Name = "DeleteWorkButton";
-            DeleteWorkBtn.Click += (s, e) => {
+            DeleteWorkBtn.Click += (s, e) =>
+            {
                 /*
                  CBoardForm.DeleteWork();
                 */

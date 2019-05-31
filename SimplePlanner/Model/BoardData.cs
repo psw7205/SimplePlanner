@@ -1,9 +1,6 @@
 ﻿using SimplePlanner.View;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SimplePlanner.Model
@@ -11,7 +8,7 @@ namespace SimplePlanner.Model
     [Serializable]
     public class BoardData
     {
-        public BoardData( string _name)
+        public BoardData(string _name)
         {
             BoardName = _name;
             Tabs = new List<TabData>();

@@ -3,9 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
@@ -23,7 +21,7 @@ namespace SimplePlanner.Model
         public string TabName { get; set; }
         public List<WorkData> Works { get; set; }
 
-        
+
 
         public void AddWork(BoardForm boardForm)
         {
@@ -34,11 +32,12 @@ namespace SimplePlanner.Model
             newWork.Name = "Work" + Works.Last().MyIndex;
             newWork.Text = Works.Last().WorkName;
             newWork.Size = new Size(100, 30);
-            newWork.Location = new Point(5, 50 + (35 * (Works.Count -1)));
+            newWork.Location = new Point(5, 50 + (35 * (Works.Count - 1)));
             newWork.BorderStyle = BorderStyle.FixedSingle;
             newWork.TextAlign = ContentAlignment.MiddleCenter;
 
-            newWork.Click += (s, e) => {
+            newWork.Click += (s, e) =>
+            {
                 Label tmp = (Label)s;
                 boardForm.CBoardForm.IsClicked = true;
                 boardForm.CBoardForm.WorkIndex = int.Parse(Regex.Replace(tmp.Name, @"\D", ""));
@@ -62,7 +61,8 @@ namespace SimplePlanner.Model
             newWork.BorderStyle = BorderStyle.FixedSingle;
             newWork.TextAlign = ContentAlignment.MiddleCenter;
 
-            newWork.Click += (s, e) => {
+            newWork.Click += (s, e) =>
+            {
                 Label tmp = (Label)s;
                 boardForm.CBoardForm.IsClicked = true;
                 boardForm.CBoardForm.WorkIndex = int.Parse(Regex.Replace(tmp.Name, @"\D", ""));
