@@ -47,6 +47,8 @@ namespace SimplePlanner.View
                 CWorkForm.DeleteWork();
             }
 
+            WorkName = "";
+            WorkContent = "";
             this.Close();
         }
     }
