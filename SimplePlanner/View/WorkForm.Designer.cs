@@ -30,10 +30,13 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.NameTextBox = new System.Windows.Forms.TextBox();
-            this.ContentTextBox = new System.Windows.Forms.TextBox();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
+            this.contentTextBox = new System.Windows.Forms.TextBox();
             this.OK = new System.Windows.Forms.Button();
-            this.DelBtn = new System.Windows.Forms.Button();
+            this.delBtn = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.colorLabel = new System.Windows.Forms.Label();
+            this.colorDialog = new System.Windows.Forms.ColorDialog();
             this.SuspendLayout();
             // 
             // label1
@@ -48,7 +51,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 85);
+            this.label2.Location = new System.Drawing.Point(13, 142);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 15);
             this.label2.TabIndex = 1;
@@ -56,22 +59,22 @@
             // 
             // NameTextBox
             // 
-            this.NameTextBox.Location = new System.Drawing.Point(16, 32);
-            this.NameTextBox.Name = "NameTextBox";
-            this.NameTextBox.Size = new System.Drawing.Size(340, 25);
-            this.NameTextBox.TabIndex = 2;
+            this.nameTextBox.Location = new System.Drawing.Point(12, 31);
+            this.nameTextBox.Name = "NameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(344, 25);
+            this.nameTextBox.TabIndex = 2;
             // 
             // ContentTextBox
             // 
-            this.ContentTextBox.Location = new System.Drawing.Point(12, 103);
-            this.ContentTextBox.Multiline = true;
-            this.ContentTextBox.Name = "ContentTextBox";
-            this.ContentTextBox.Size = new System.Drawing.Size(340, 276);
-            this.ContentTextBox.TabIndex = 3;
+            this.contentTextBox.Location = new System.Drawing.Point(12, 160);
+            this.contentTextBox.Multiline = true;
+            this.contentTextBox.Name = "ContentTextBox";
+            this.contentTextBox.Size = new System.Drawing.Size(344, 276);
+            this.contentTextBox.TabIndex = 3;
             // 
             // OK
             // 
-            this.OK.Location = new System.Drawing.Point(200, 385);
+            this.OK.Location = new System.Drawing.Point(200, 442);
             this.OK.Name = "OK";
             this.OK.Size = new System.Drawing.Size(75, 23);
             this.OK.TabIndex = 4;
@@ -81,23 +84,43 @@
             // 
             // DelBtn
             // 
-            this.DelBtn.Location = new System.Drawing.Point(281, 385);
-            this.DelBtn.Name = "DelBtn";
-            this.DelBtn.Size = new System.Drawing.Size(75, 23);
-            this.DelBtn.TabIndex = 5;
-            this.DelBtn.Text = "DEL";
-            this.DelBtn.UseVisualStyleBackColor = true;
-            this.DelBtn.Click += new System.EventHandler(this.DelBtn_Click);
+            this.delBtn.Location = new System.Drawing.Point(281, 442);
+            this.delBtn.Name = "DelBtn";
+            this.delBtn.Size = new System.Drawing.Size(75, 23);
+            this.delBtn.TabIndex = 5;
+            this.delBtn.Text = "DEL";
+            this.delBtn.UseVisualStyleBackColor = true;
+            this.delBtn.Click += new System.EventHandler(this.DelBtn_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 71);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(51, 15);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "LABEL";
+            // 
+            // ColorLabel
+            // 
+            this.colorLabel.BackColor = System.Drawing.Color.White;
+            this.colorLabel.Location = new System.Drawing.Point(15, 99);
+            this.colorLabel.Name = "ColorLabel";
+            this.colorLabel.Size = new System.Drawing.Size(70, 23);
+            this.colorLabel.TabIndex = 7;
+            this.colorLabel.Click += new System.EventHandler(this.ColorLabel_Click);
             // 
             // WorkForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(368, 420);
-            this.Controls.Add(this.DelBtn);
+            this.ClientSize = new System.Drawing.Size(368, 477);
+            this.Controls.Add(this.colorLabel);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.delBtn);
             this.Controls.Add(this.OK);
-            this.Controls.Add(this.ContentTextBox);
-            this.Controls.Add(this.NameTextBox);
+            this.Controls.Add(this.contentTextBox);
+            this.Controls.Add(this.nameTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -114,9 +137,12 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox NameTextBox;
-        private System.Windows.Forms.TextBox ContentTextBox;
+        private System.Windows.Forms.TextBox nameTextBox;
+        private System.Windows.Forms.TextBox contentTextBox;
         private System.Windows.Forms.Button OK;
-        private System.Windows.Forms.Button DelBtn;
+        private System.Windows.Forms.Button delBtn;
+        private System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Label colorLabel;
+        private System.Windows.Forms.ColorDialog colorDialog;
     }
 }

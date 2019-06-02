@@ -51,11 +51,10 @@ namespace SimplePlanner.View
             // 폼 생성
             CBoardForm = new BoardFormController(this, workForm);
             CWorkForm = new WorkFormController(this, workForm);
-            CTabForm = new TabEditFormController(this, tabEditForm);
+            CTabForm = new TabEditFormController(tabEditForm);
 
             // 폼에 컨트롤러 연결
             workForm.Link(CWorkForm);
-            tabEditForm.Link(CTabForm);
 
             // 기존 데이터 불러오기
             // 정상적으로 데이터를 불러 왔다면 불러온 데이터로 초기화

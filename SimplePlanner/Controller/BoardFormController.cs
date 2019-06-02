@@ -74,16 +74,23 @@ namespace SimplePlanner.Controller
                     {
                         CurrentWork.WorkName = item.WorkName;
                         CurrentWork.WorkContent = item.WorkContent;
+                        CurrentWork.Color = item.Color;
                         break;
                     }
                 }
-
-                workForm.WorkName = CurrentWork.WorkName;
-                workForm.WorkContent = CurrentWork.WorkContent;
             }
 
+            workForm.WorkName = CurrentWork.WorkName;
+            workForm.WorkContent = CurrentWork.WorkContent;
+            workForm.colorLabel.BackColor = CurrentWork.Color;
+
             workForm.ShowDialog();
+
+            CurrentWork.WorkName = workForm.WorkName = "";
+            CurrentWork.WorkContent = workForm.WorkContent = "";
+            CurrentWork.Color = workForm.colorLabel.BackColor = System.Drawing.Color.White;
         }
+
 
         /// <summary>
         /// 보드 폼에서 새 탭을 추가하는 경우
@@ -134,7 +141,11 @@ namespace SimplePlanner.Controller
         {
             int tabIndex = boardForm.TabControl.SelectedIndex;
             TabData tabData = BoardData.Tabs.ElementAt(tabIndex);
-            tabData.Works.Add(new WorkData(CurrentWork.WorkName, CurrentWork.WorkContent));
+            WorkData tmp = new WorkData(CurrentWork.WorkName, CurrentWork.WorkContent)
+            {
+                Color = CurrentWork.Color
+            };
+            tabData.Works.Add(tmp);
             tabData.AddWorkLabel(boardForm);
         }
 
@@ -165,6 +176,7 @@ namespace SimplePlanner.Controller
                 {
                     item.WorkName = CurrentWork.WorkName;
                     item.WorkContent = CurrentWork.WorkContent;
+                    item.Color = CurrentWork.Color;
                     item.UpdateLabelText(boardForm);
                     break;
                 }

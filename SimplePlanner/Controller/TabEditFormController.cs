@@ -1,15 +1,14 @@
 ﻿using SimplePlanner.View;
+using System.Windows.Forms;
 
 namespace SimplePlanner.Controller
 {
     public class TabEditFormController
     {
-        readonly BoardForm boardForm;
         readonly TabEditForm tabEditForm;
 
-        public TabEditFormController(BoardForm _boardForm, TabEditForm _TabEdit)
+        public TabEditFormController(TabEditForm _TabEdit)
         {
-            boardForm = _boardForm;
             tabEditForm = _TabEdit;
         }
 
@@ -20,7 +19,10 @@ namespace SimplePlanner.Controller
         public string OpenTabEditForm()
         {
             tabEditForm.NewTabName = "";
-            tabEditForm.ShowDialog();
+            DialogResult result = tabEditForm.ShowDialog();
+            if (result.Equals(DialogResult.OK))
+                return "";
+
             return tabEditForm.NewTabName;
         }
     }

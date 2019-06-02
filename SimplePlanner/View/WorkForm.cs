@@ -13,8 +13,8 @@ namespace SimplePlanner.View
         /// </summary>
         public string WorkName
         {
-            get { return NameTextBox.Text; }
-            set { NameTextBox.Text = value; }
+            get { return nameTextBox.Text; }
+            set { nameTextBox.Text = value; }
         }
 
         /// <summary>
@@ -22,8 +22,8 @@ namespace SimplePlanner.View
         /// </summary>
         public string WorkContent
         {
-            get { return ContentTextBox.Text; }
-            set { ContentTextBox.Text = value; }
+            get { return contentTextBox.Text; }
+            set { contentTextBox.Text = value; }
         }
 
         public WorkForm()
@@ -68,6 +68,15 @@ namespace SimplePlanner.View
             WorkName = "";
             WorkContent = "";
             this.Close();
+        }
+
+        private void ColorLabel_Click(object sender, EventArgs e)
+        {
+            DialogResult result = colorDialog.ShowDialog();
+            if (result.Equals(DialogResult.OK))
+            {
+                colorLabel.BackColor = colorDialog.Color;
+            }
         }
     }
 }

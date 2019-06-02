@@ -11,12 +11,14 @@ namespace SimplePlanner.Model
         public static int ID;
         public int MyID;
         public bool IsClicked;
+        public System.Drawing.Color Color;
 
         public WorkData(string _name = "", string _content = "")
         {
             WorkName = _name;
             WorkContent = _content;
             MyID = ID;
+            Color = Color.White;
             ID++;
             IsClicked = false;
         }

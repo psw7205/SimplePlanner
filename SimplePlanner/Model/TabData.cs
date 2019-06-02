@@ -67,6 +67,7 @@ namespace SimplePlanner.Model
                 BorderStyle = BorderStyle.FixedSingle,
                 TextAlign = ContentAlignment.MiddleCenter
             };
+            WorkData.ID++;
 
             newWork.Click += (s, e) =>
             {

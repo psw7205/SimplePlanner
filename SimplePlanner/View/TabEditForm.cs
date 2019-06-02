@@ -6,7 +6,6 @@ namespace SimplePlanner.View
 {
     public partial class TabEditForm : Form
     {
-        TabEditFormController CTabEditForm;
         public string NewTabName
         {
             get { return textBox.Text; }
@@ -18,10 +17,6 @@ namespace SimplePlanner.View
             InitializeComponent();
         }
 
-        public void Link(TabEditFormController _CTabEditForm)
-        {
-            CTabEditForm = _CTabEditForm;
-        }
 
         private void OKBtn_Click(object sender, EventArgs e)
         {

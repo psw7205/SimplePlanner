@@ -53,6 +53,7 @@ namespace SimplePlanner.Controller
         {
             boardForm.CBoardForm.CurrentWork.WorkName = workForm.WorkName;
             boardForm.CBoardForm.CurrentWork.WorkContent = workForm.WorkContent;
+            boardForm.CBoardForm.CurrentWork.Color = workForm.colorLabel.BackColor;
 
             if (boardForm.CBoardForm.isLabel)
             {
@@ -62,9 +63,6 @@ namespace SimplePlanner.Controller
             {
                 boardForm.CBoardForm.CreateWork();
             }
-
-            boardForm.CBoardForm.CurrentWork.WorkName = workForm.WorkName = "";
-            boardForm.CBoardForm.CurrentWork.WorkContent = workForm.WorkContent = "";
         }
     }
 }
