@@ -1,0 +1,328 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SimplePlanner</name>
+    </assembly>
+    <members>
+        <member name="F:SimplePlanner.Controller.BoardFormController.BoardData">
+            <summary>
+            관리할 데이터
+            </summary>
+        </member>
+        <member name="F:SimplePlanner.Controller.BoardFormController.CurrentWork">
+            <summary>
+            현재 클릭한 일정 정보
+            </summary>
+        </member>
+        <member name="F:SimplePlanner.Controller.BoardFormController.isLabel">
+            <summary>
+             클릭한 게 새 일정 버튼인지 일정 라벨인지 구분할 flag
+            </summary>
+        </member>
+        <member name="M:SimplePlanner.Controller.BoardFormController.#ctor(SimplePlanner.View.BoardForm,SimplePlanner.View.WorkForm)">
+            <summary>
+            생성자 컨트롤러 생성 시 보드 폼, 일정 폼을 컨트롤러와 연결
+            </summary>
+            <param name="_boardForm"></param>
+            <param name="_workForm"></param>
+        </member>
+        <member name="M:SimplePlanner.Controller.BoardFormController.Init">
+            <summary>
+            프로그램 최초 실행 시 기본 탭 생성
+            기존에 데이터가 있는 경우 실행 X
+            </summary>
+        </member>
+        <member name="M:SimplePlanner.Controller.BoardFormController.OpenWorkForm">
+            <summary>
+            보드 폼에서 일정 폼을 열 때
+            </summary>
+        </member>
+        <member name="M:SimplePlanner.Controller.BoardFormController.AddTabData(System.String)">
+            <summary>
+            보드 폼에서 새 탭을 추가하는 경우
+            보드 데이터 추가, 탭 추가
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="M:SimplePlanner.Controller.BoardFormController.UpdateTabData(System.String)">
+            <summary>
+            탭 데이터 변경
+            </summary>
+            <param name="_name"></param>
+        </member>
+        <member name="M:SimplePlanner.Controller.BoardFormController.DelTabData">
+            <summary>
+            탭 데이터 삭제
+            </summary>
+        </member>
+        <member name="M:SimplePlanner.Controller.BoardFormController.MoveBtn">
+            <summary>
+            새 일정 버튼이 현재 탭에 위치하도록 이동
+            </summary>
+        </member>
+        <member name="M:SimplePlanner.Controller.BoardFormController.CreateWork">
+            <summary>
+            새 일정을 만들 때 호출
+            현재 탭 데이터를 가져와 일정 추가
+            </summary>
+        </member>
+        <member name="M:SimplePlanner.Controller.BoardFormController.LabelClick(System.Windows.Forms.Label)">
+            <summary>
+            라벨이 클릭 될 때 호출되는 함수
+            </summary>
+            <param name="label"></param>
+        </member>
+        <member name="M:SimplePlanner.Controller.BoardFormController.UpdateWork">
+            <summary>
+            기존 일정을 수정할 때 호출되는 함수
+            현재 클릭된 라벨을 찾아 해당 라벨의 Text 수정
+            </summary>
+        </member>
+        <member name="T:SimplePlanner.Controller.DataController">
+            <summary>
+            데이터를 저장하고 불러오는 클래스
+            </summary>
+        </member>
+        <member name="F:SimplePlanner.Controller.DataController.Filename">
+            <summary>
+            파일의 기본 저장 위치
+            </summary>
+        </member>
+        <member name="M:SimplePlanner.Controller.DataController.Init(SimplePlanner.View.BoardForm)">
+            <summary>
+            처음 실행 시 불러온 데이터에 맞게 탭, 일정 생성
+            </summary>
+            <param name="BoardForm"></param>
+        </member>
+        <member name="M:SimplePlanner.Controller.DataController.SerializeData(SimplePlanner.Model.BoardData)">
+            <summary>
+            데이터 직렬화, Data.dat 파일로 저장
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:SimplePlanner.Controller.DataController.DeserializeData">
+            <summary>
+            역직렬화, 보드 데이터가 없거나 잘못 되었다면 null 반환
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SimplePlanner.Controller.TabEditFormController.OpenTabEditForm">
+            <summary>
+            탭 폼 열기, 탭 이름 데이터 리턴
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SimplePlanner.Controller.WorkFormController.#ctor(SimplePlanner.View.BoardForm,SimplePlanner.View.WorkForm)">
+            <summary>
+            컨트롤러 생성시 폼 연결
+            </summary>
+            <param name="_boardForm"></param>
+            <param name="_workForm"></param>
+        </member>
+        <member name="M:SimplePlanner.Controller.WorkFormController.DeleteWorkData">
+            <summary>
+            일정 삭제
+            보드 폼에서 현재 클릭한 일정데이터, 라벨 삭제
+            </summary>
+        </member>
+        <member name="M:SimplePlanner.Controller.WorkFormController.OKBtnClicked">
+            <summary>
+            일정 폼 호출 시
+            기존 일정 라벨을 클릭했으면 일정 업데이트
+            새 일정을 클릭했다면 새 일정 추가
+            </summary>
+        </member>
+        <member name="M:SimplePlanner.Model.BoardData.AddTab(SimplePlanner.View.BoardForm,System.String)">
+            <summary>
+            탭 데이터 추가 시 보드 폼에도 탭 추가
+            </summary>
+            <param name="boardForm"></param>
+            <param name="name"></param>
+        </member>
+        <member name="M:SimplePlanner.Model.BoardData.DelTab(SimplePlanner.View.BoardForm)">
+            <summary>
+            보드 폼에서 탭 삭제
+            </summary>
+            <param name="boardForm"></param>
+        </member>
+        <member name="M:SimplePlanner.Model.BoardData.UpdateTabName(SimplePlanner.View.BoardForm,System.String)">
+            <summary>
+            탭 이름 변경
+            </summary>
+            <param name="boardForm"></param>
+            <param name="_name"></param>
+        </member>
+        <member name="M:SimplePlanner.Model.TabData.AddWorkLabel(SimplePlanner.View.BoardForm)">
+            <summary>
+            일정 데이터 추가시 보드 폼에서 일정 라벨 추가
+            </summary>
+            <param name="boardForm"></param>
+        </member>
+        <member name="M:SimplePlanner.Model.TabData.InitWorkLabel(SimplePlanner.View.BoardForm,SimplePlanner.Model.WorkData,System.Int32)">
+            <summary>
+            프로그램 최초 실행 시 일정 라벨 초기화
+            </summary>
+            <param name="boardForm"></param>
+            <param name="workData"></param>
+            <param name="i"></param>
+        </member>
+        <member name="M:SimplePlanner.Model.WorkData.UpdateLabelText(SimplePlanner.View.BoardForm)">
+            <summary>
+            일정 라벨의 텍스트 변경
+            </summary>
+            <param name="boardForm"></param>
+        </member>
+        <member name="M:SimplePlanner.Model.WorkData.UpdateLabelLocation(SimplePlanner.View.BoardForm)">
+            <summary>
+            일정 삭제 시 기존 일정의 위치 업데이트
+            </summary>
+            <param name="boardForm"></param>
+        </member>
+        <member name="M:SimplePlanner.Model.WorkData.DeleteLabel(SimplePlanner.View.BoardForm)">
+            <summary>
+            일정라벨 삭제
+            </summary>
+            <param name="boardForm"></param>
+        </member>
+        <member name="M:SimplePlanner.View.BoardForm.#ctor">
+            <summary>
+            보드 폼 생성자, 프로그램 실행 시 최초 호출
+            </summary>
+        </member>
+        <member name="M:SimplePlanner.View.BoardForm.AddBtn_Click(System.Object,System.EventArgs)">
+            <summary>
+            탭 추가 버튼 클릭 시
+            탭 폼에서 반환된 데이터로 새 탭 추가
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SimplePlanner.View.BoardForm.TabControl_Selected(System.Object,System.Windows.Forms.TabControlEventArgs)">
+            <summary>
+            탭 변경시 컨트롤러에서 MoveBtn() 호출로 생성버튼 이동
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SimplePlanner.View.BoardForm.BoardForm_FormClosed(System.Object,System.Windows.Forms.FormClosedEventArgs)">
+            <summary>
+            프로그램 종료 시 데이터 저장
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SimplePlanner.View.BoardForm.EditBtn_Click(System.Object,System.EventArgs)">
+            <summary>
+            탭 수정 버튼 클릭 시 
+            탭 폼에서 반환된 데이터로 탭 이름 수정
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SimplePlanner.View.BoardForm.DelBtn_Click(System.Object,System.EventArgs)">
+            <summary>
+            삭제 버튼 클릭시 컨트롤러에서 DelTabData()호출로 탭 삭제
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:SimplePlanner.View.BoardForm.components">
+            <summary>
+            필수 디자이너 변수입니다.
+            </summary>
+        </member>
+        <member name="M:SimplePlanner.View.BoardForm.Dispose(System.Boolean)">
+            <summary>
+            사용 중인 모든 리소스를 정리합니다.
+            </summary>
+            <param name="disposing">관리되는 리소스를 삭제해야 하면 true이고, 그렇지 않으면 false입니다.</param>
+        </member>
+        <member name="M:SimplePlanner.View.BoardForm.InitializeComponent">
+            <summary>
+            디자이너 지원에 필요한 메서드입니다. 
+            이 메서드의 내용을 코드 편집기로 수정하지 마세요.
+            </summary>
+        </member>
+        <member name="F:SimplePlanner.View.TabEditForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SimplePlanner.View.TabEditForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SimplePlanner.View.TabEditForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:SimplePlanner.View.WorkForm.WorkName">
+            <summary>
+            일정 이름
+            </summary>
+        </member>
+        <member name="P:SimplePlanner.View.WorkForm.WorkContent">
+            <summary>
+            일정 내용
+            </summary>
+        </member>
+        <member name="M:SimplePlanner.View.WorkForm.OKBtn_Click(System.Object,System.EventArgs)">
+            <summary>
+            컨트롤러의 OKBtnClicked함수 호출
+            폼 종료
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SimplePlanner.View.WorkForm.DelBtn_Click(System.Object,System.EventArgs)">
+            <summary>
+            컨트롤러의 DeleteWorkData()함수 호출
+            내용 초기화 후 폼 종료
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:SimplePlanner.View.WorkForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SimplePlanner.View.WorkForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SimplePlanner.View.WorkForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:SimplePlanner.Program.Main">
+            <summary>
+            해당 응용 프로그램의 주 진입점입니다.
+            </summary>
+        </member>
+        <member name="T:SimplePlanner.Properties.Resources">
+            <summary>
+              지역화된 문자열 등을 찾기 위한 강력한 형식의 리소스 클래스입니다.
+            </summary>
+        </member>
+        <member name="P:SimplePlanner.Properties.Resources.ResourceManager">
+            <summary>
+              이 클래스에서 사용하는 캐시된 ResourceManager 인스턴스를 반환합니다.
+            </summary>
+        </member>
+        <member name="P:SimplePlanner.Properties.Resources.Culture">
+            <summary>
+              이 강력한 형식의 리소스 클래스를 사용하여 모든 리소스 조회에 대해 현재 스레드의 CurrentUICulture 속성을
+              재정의합니다.
+            </summary>
+        </member>
+    </members>
+</doc>

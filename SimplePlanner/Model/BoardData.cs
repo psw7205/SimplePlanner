@@ -17,7 +17,11 @@ namespace SimplePlanner.Model
         public string BoardName { get; set; }
         public List<TabData> Tabs { get; set; }
 
-        // 탭 데이터 추가 시 보드 폼에도 탭 추가
+        /// <summary>
+        /// 탭 데이터 추가 시 보드 폼에도 탭 추가
+        /// </summary>
+        /// <param name="boardForm"></param>
+        /// <param name="name"></param>
         public void AddTab(BoardForm boardForm, string name = "New Tab")
         {
             TabPage tabPage = new TabPage(name)
@@ -30,11 +34,23 @@ namespace SimplePlanner.Model
             boardForm.TabControl.SelectedTab = boardForm.TabControl.TabPages[boardForm.TabControl.TabCount - 1];
         }
 
-        // 보드 폼에서 탭 삭제
+        /// <summary>
+        /// 보드 폼에서 탭 삭제
+        /// </summary>
+        /// <param name="boardForm"></param>
         public void DelTab(BoardForm boardForm)
         {
             boardForm.TabControl.TabPages.Remove(boardForm.TabControl.SelectedTab);
         }
-
+        
+        /// <summary>
+        /// 탭 이름 변경
+        /// </summary>
+        /// <param name="boardForm"></param>
+        /// <param name="_name"></param>
+        public void UpdateTabName(BoardForm boardForm, string _name)
+        {
+            boardForm.TabControl.SelectedTab.Text = _name;
+        }
     }
 }

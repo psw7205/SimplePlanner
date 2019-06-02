@@ -23,15 +23,19 @@ namespace SimplePlanner.Model
 
         public string WorkName { get; set; }
         public string WorkContent { get; set; }
-        
-        // 일정 라벨의 텍스트 변경
+        /// <summary>
+        /// 일정 라벨의 텍스트 변경
+        /// </summary>
+        /// <param name="boardForm"></param>
         public void UpdateLabelText(BoardForm boardForm)
         {
             Label label = boardForm.CBoardForm.CurrentLabel;
             label.Text = this.WorkName;
         }
-
-        // 일정 삭제 시 기존 일정의 위치 업데이트
+        /// <summary>
+        /// 일정 삭제 시 기존 일정의 위치 업데이트
+        /// </summary>
+        /// <param name="boardForm"></param>
         public static void UpdateLabelLocation(BoardForm boardForm)
         {
             TabPage tab = boardForm.TabControl.SelectedTab;
@@ -47,7 +51,10 @@ namespace SimplePlanner.Model
             }
         }
 
-        // 일정라벨 삭제
+        /// <summary>
+        /// 일정라벨 삭제
+        /// </summary>
+        /// <param name="boardForm"></param>
         public static void DeleteLabel(BoardForm boardForm)
         {
             Label tmp = boardForm.CBoardForm.CurrentLabel;

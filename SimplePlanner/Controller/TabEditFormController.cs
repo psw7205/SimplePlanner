@@ -13,7 +13,10 @@ namespace SimplePlanner.Controller
             tabEditForm = _TabEdit;
         }
 
-        // 탭 폼 열기, 탭 이름 데이터 리턴
+        /// <summary>
+        /// 탭 폼 열기, 탭 이름 데이터 리턴
+        /// </summary>
+        /// <returns></returns>
         public string OpenTabEditForm()
         {
             tabEditForm.NewTabName = "";

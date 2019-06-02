@@ -6,13 +6,20 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 namespace SimplePlanner.Controller
 {
-    // 데이터를 저장하고 불러오는 클래스
+    /// <summary>
+    /// 데이터를 저장하고 불러오는 클래스
+    /// </summary>
     public class DataController
     {
-        // 파일의 기본 저장 위치
+        /// <summary>
+        /// 파일의 기본 저장 위치
+        /// </summary>
         private readonly string Filename = @"./Data.dat";
 
-        // 처음 실행 시 불러온 데이터에 맞게 탭, 일정 생성
+        /// <summary>
+        /// 처음 실행 시 불러온 데이터에 맞게 탭, 일정 생성
+        /// </summary>
+        /// <param name="BoardForm"></param>
         public void Init(BoardForm BoardForm)
         {
             BoardData board = BoardForm.CBoardForm.BoardData;
@@ -30,8 +37,11 @@ namespace SimplePlanner.Controller
                 i++;
             }
         }
-        
-        // 데이터 직렬화 
+
+        /// <summary>
+        /// 데이터 직렬화, Data.dat 파일로 저장
+        /// </summary>
+        /// <param name="data"></param>
         public void SerializeData(BoardData data)
         {
             BinaryFormatter binFmt = new BinaryFormatter();
@@ -41,7 +51,10 @@ namespace SimplePlanner.Controller
             }
         }
 
-        // 보드 데이터가 없거나 잘못 되었다면 null 반환
+        /// <summary>
+        /// 역직렬화, 보드 데이터가 없거나 잘못 되었다면 null 반환
+        /// </summary>
+        /// <returns></returns>
         public BoardData DeserializeData()
         {
             BoardData p;

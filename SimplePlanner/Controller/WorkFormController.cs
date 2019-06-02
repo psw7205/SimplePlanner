@@ -8,15 +8,21 @@ namespace SimplePlanner.Controller
         readonly BoardForm boardForm;
         readonly WorkForm workForm;
 
-        // 컨트롤러 생성시 폼 연결
+        /// <summary>
+        /// 컨트롤러 생성시 폼 연결
+        /// </summary>
+        /// <param name="_boardForm"></param>
+        /// <param name="_workForm"></param>
         public WorkFormController(BoardForm _boardForm, WorkForm _workForm)
         {
             boardForm = _boardForm;
             workForm = _workForm;
         }
 
-        // 일정 삭제
-        // 보드 폼에서 현재 클릭한 일정데이터, 라벨 삭제
+        /// <summary>
+        /// 일정 삭제
+        /// 보드 폼에서 현재 클릭한 일정데이터, 라벨 삭제
+        /// </summary>
         public void DeleteWorkData()
         {
             BoardData data = boardForm.CBoardForm.BoardData;
@@ -38,10 +44,12 @@ namespace SimplePlanner.Controller
             WorkData.UpdateLabelLocation(boardForm);
         }
 
-        // 일정 폼 호출 시
-        // 기존 일정 라벨을 클릭했으면 일정 업데이트
-        // 새 일정을 클릭했다면 새 일정 추가
-        public void UpdateWorkData()
+        /// <summary>
+        /// 일정 폼 호출 시
+        /// 기존 일정 라벨을 클릭했으면 일정 업데이트
+        /// 새 일정을 클릭했다면 새 일정 추가
+        /// </summary>
+        public void OKBtnClicked()
         {
             boardForm.CBoardForm.CurrentWork.WorkName = workForm.WorkName;
             boardForm.CBoardForm.CurrentWork.WorkContent = workForm.WorkContent;

@@ -24,6 +24,9 @@ namespace SimplePlanner.View
             set { tabControl = value; }
         }
 
+        /// <summary>
+        /// 보드 폼 생성자, 프로그램 실행 시 최초 호출
+        /// </summary>
         public BoardForm()
         {
             InitializeComponent();
@@ -71,34 +74,55 @@ namespace SimplePlanner.View
 
         }
 
-        // 탭 추가 버튼 클리기 시
-        // 탭 폼에서 반환된 데이터로 새 탭 추가
+        /// <summary>
+        /// 탭 추가 버튼 클릭 시
+        /// 탭 폼에서 반환된 데이터로 새 탭 추가
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AddBtn_Click(object sender, EventArgs e)
         {
             string name = CTabForm.OpenTabEditForm();
             CBoardForm.AddTabData(name);
         }
 
-        // 탭 변경시 생성버튼 이동
+        /// <summary>
+        /// 탭 변경시 컨트롤러에서 MoveBtn() 호출로 생성버튼 이동
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TabControl_Selected(object sender, TabControlEventArgs e)
         {
             CBoardForm.MoveBtn();
         }
 
-        // 프로그램 종료 시 데이터 저장
+        /// <summary>
+        /// 프로그램 종료 시 데이터 저장
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BoardForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             CData.SerializeData(CBoardForm.BoardData);
         }
 
-        // 탭 수정 버튼 클릭 시 데이터 수정
+        /// <summary>
+        /// 탭 수정 버튼 클릭 시 
+        /// 탭 폼에서 반환된 데이터로 탭 이름 수정
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void EditBtn_Click(object sender, EventArgs e)
         {
             string name = CTabForm.OpenTabEditForm();
-            tabControl.SelectedTab.Text = name;
+            CBoardForm.UpdateTabData(name);
         }
 
-        // 삭제 버튼 클릭시 탭 삭제
+        /// <summary>
+        /// 삭제 버튼 클릭시 컨트롤러에서 DelTabData()호출로 탭 삭제
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DelBtn_Click(object sender, EventArgs e)
         {
             CBoardForm.DelTabData();
