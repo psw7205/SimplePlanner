@@ -20,6 +20,7 @@ namespace SimplePlanner.Model
         public string TabName { get; set; }
         public List<WorkData> Works { get; set; }
 
+        // 일정 데이터 추가시 보드 폼에서 일정 라벨 추가
         public void AddWorkLabel(BoardForm boardForm)
         {
             int tabIndex = boardForm.TabControl.SelectedIndex;
@@ -27,7 +28,7 @@ namespace SimplePlanner.Model
 
             Label newWork = new Label
             {
-                Name = "Work" + Works.Last().MyIndex,
+                Name = "Work" + Works.Last().MyID,
                 Text = Works.Last().WorkName,
                 Size = new Size(100, 30),
                 Location = new Point(5, 50 + (35 * (Works.Count - 1))),
@@ -43,6 +44,7 @@ namespace SimplePlanner.Model
             tabPage.Controls.Add(newWork);
         }
 
+        // 프로그램 최초 실행 시 일정 라벨 초기화
         public void InitWorkLabel(BoardForm boardForm, WorkData workData, int i)
         {
             int tabIndex = boardForm.TabControl.SelectedIndex;
@@ -50,7 +52,7 @@ namespace SimplePlanner.Model
 
             Label newWork = new Label
             {
-                Name = "Work" + workData.MyIndex,
+                Name = "Work" + workData.MyID,
                 Text = workData.WorkName,
                 Size = new Size(100, 30),
                 Location = new Point(5, 50 + (35 * i)),
