@@ -1,49 +1,89 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="SimplePlanner.Controller.BoardFormController" Collapsed="true">
-    <Position X="9.75" Y="0.5" Width="1.5" />
+    <Position X="4" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AQAAAAAACAgABAAEACABAAJAgAQACAAAAAADAAAAAAA=</HashCode>
       <FileName>Controller\BoardFormController.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SimplePlanner.Controller.DataController" Collapsed="true">
-    <Position X="7.75" Y="0.75" Width="1.5" />
+    <Position X="5.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAQAAAAAgAAAAAAAAAAgAAAAACAAAAAAA=</HashCode>
       <FileName>Controller\DataController.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SimplePlanner.Controller.TabEditFormController" Collapsed="true">
-    <Position X="7" Y="2.75" Width="1.5" />
+    <Position X="2.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAQAAAAAgAAIAAAAAAAAQAAAAAAAIAAAAAAAA=</HashCode>
       <FileName>Controller\TabEditFormController.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SimplePlanner.Controller.WorkFormController" Collapsed="true">
-    <Position X="9.5" Y="2.75" Width="1.5" />
+    <Position X="0.5" Y="3.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAQCAAgAAAAAAAAAAAA=</HashCode>
       <FileName>Controller\WorkFormController.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SimplePlanner.View.BoardForm">
+  <Class Name="SimplePlanner.Model.BoardData" Collapsed="true">
     <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAEAAAAAAAAAAAAIAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\BoardData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimplePlanner.Model.TabData" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAECAA=</HashCode>
+      <FileName>Model\TabData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimplePlanner.Model.WorkData" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAACAACAEAAgAAAAAAAAAEAAAAAAAEAAEAAAAA=</HashCode>
+      <FileName>Model\WorkData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimplePlanner.Program" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimplePlanner.Properties.Resources" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimplePlanner.Properties.Settings" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimplePlanner.View.BoardForm" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAwCAAQQAAoACBAAgCBAYEAAACgAIAAACAAAI=</HashCode>
       <FileName>View\BoardForm.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SimplePlanner.View.TabEditForm">
-    <Position X="4" Y="0.5" Width="1.5" />
+  <Class Name="SimplePlanner.View.TabEditForm" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAQAAAACAAABACAACAEAACAAAAQAAAAAAAQAAACAA=</HashCode>
       <FileName>View\TabEditForm.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SimplePlanner.View.WorkForm">
-    <Position X="2.25" Y="0.5" Width="1.5" />
+  <Class Name="SimplePlanner.View.WorkForm" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAAAAAAAACAAABAAgACAAAACBAACAAACIAABQEAAAAA=</HashCode>
       <FileName>View\WorkForm.cs</FileName>

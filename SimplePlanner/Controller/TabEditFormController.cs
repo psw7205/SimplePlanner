@@ -6,19 +6,28 @@ namespace SimplePlanner.Controller
     {
         readonly BoardForm boardForm;
         readonly TabEditForm tabEditForm;
+        public bool flag;
 
         public TabEditFormController(BoardForm _boardForm, TabEditForm _TabEdit)
         {
             boardForm = _boardForm;
             tabEditForm = _TabEdit;
+            flag = true;
         }
 
-        // 탭 폼 열기, 탭 이름 데이터 리턴
+        public void UpdateTabName()
+        {
+            if (flag)
+            {
+                boardForm.TabControl.SelectedTab.Text = tabEditForm.TabName;
+            }
+        }
+
         public string OpenTabEditForm()
         {
-            tabEditForm.NewTabName = "";
+            tabEditForm.TabName = "";
             tabEditForm.ShowDialog();
-            return tabEditForm.NewTabName;
+            return tabEditForm.TabName;
         }
     }
 }

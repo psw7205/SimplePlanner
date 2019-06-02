@@ -7,7 +7,7 @@ namespace SimplePlanner.View
     public partial class TabEditForm : Form
     {
         TabEditFormController CTabEditForm;
-        public string NewTabName
+        public string TabName
         {
             get { return textBox.Text; }
             set { textBox.Text = value; }
@@ -23,8 +23,10 @@ namespace SimplePlanner.View
             CTabEditForm = _CTabEditForm;
         }
 
-        private void OKBtn_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
+            CTabEditForm.UpdateTabName();
+
             this.Close();
         }
     }

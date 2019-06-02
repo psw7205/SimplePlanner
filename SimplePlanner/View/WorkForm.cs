@@ -30,23 +30,21 @@ namespace SimplePlanner.View
             CWorkForm = _CWorkForm;
         }
 
-        // 데이터가 공백이면 무시
         private void OKBtn_Click(object sender, EventArgs e)
         {
             if (WorkName != "" && WorkContent != "")
             {
-                CWorkForm.UpdateWorkData();
+                CWorkForm.SendValue();
             }
 
             this.Close();
         }
 
-        // 삭제 버튼 클릭 시
         private void DelBtn_Click(object sender, EventArgs e)
         {
             if (WorkName != "" && WorkContent != "")
             {
-                CWorkForm.DeleteWorkData();
+                CWorkForm.DeleteWork();
             }
 
             WorkName = "";
