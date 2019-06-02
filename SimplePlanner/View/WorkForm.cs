@@ -44,7 +44,7 @@ namespace SimplePlanner.View
         /// <param name="e"></param>
         private void OKBtn_Click(object sender, EventArgs e)
         {
-            if (WorkName != "" && WorkContent != "")
+            if (WorkName != "")
             {
                 CWorkForm.OKBtnClicked();
             }

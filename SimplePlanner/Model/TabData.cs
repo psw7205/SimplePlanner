@@ -33,6 +33,7 @@ namespace SimplePlanner.Model
             {
                 Name = "Work" + Works.Last().MyID,
                 Text = Works.Last().WorkName,
+                BackColor = Works.Last().Color,
                 Size = new Size(100, 30),
                 Location = new Point(5, 50 + (35 * (Works.Count - 1))),
                 BorderStyle = BorderStyle.FixedSingle,
@@ -62,6 +63,7 @@ namespace SimplePlanner.Model
             {
                 Name = "Work" + workData.MyID,
                 Text = workData.WorkName,
+                BackColor = workData.Color,
                 Size = new Size(100, 30),
                 Location = new Point(5, 50 + (35 * i)),
                 BorderStyle = BorderStyle.FixedSingle,

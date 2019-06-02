@@ -33,6 +33,7 @@ namespace SimplePlanner.Model
         {
             Label label = boardForm.CBoardForm.CurrentLabel;
             label.Text = this.WorkName;
+            label.BackColor = this.Color;
         }
         /// <summary>
         /// 일정 삭제 시 기존 일정의 위치 업데이트
