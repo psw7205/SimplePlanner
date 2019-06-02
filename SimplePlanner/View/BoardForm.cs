@@ -83,7 +83,8 @@ namespace SimplePlanner.View
         private void AddBtn_Click(object sender, EventArgs e)
         {
             string name = CTabForm.OpenTabEditForm();
-            CBoardForm.AddTabData(name);
+            if (name != "")
+                CBoardForm.AddTabData(name);
         }
 
         /// <summary>
@@ -115,7 +116,8 @@ namespace SimplePlanner.View
         private void EditBtn_Click(object sender, EventArgs e)
         {
             string name = CTabForm.OpenTabEditForm();
-            CBoardForm.UpdateTabData(name);
+            if(name != "")
+                CBoardForm.UpdateTabData(name);
         }
 
         /// <summary>

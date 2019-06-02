@@ -66,7 +66,7 @@
             this.ContentTextBox.Location = new System.Drawing.Point(12, 103);
             this.ContentTextBox.Multiline = true;
             this.ContentTextBox.Name = "ContentTextBox";
-            this.ContentTextBox.Size = new System.Drawing.Size(344, 276);
+            this.ContentTextBox.Size = new System.Drawing.Size(340, 276);
             this.ContentTextBox.TabIndex = 3;
             // 
             // OK
