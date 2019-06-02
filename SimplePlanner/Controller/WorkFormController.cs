@@ -8,23 +8,26 @@ namespace SimplePlanner.Controller
         readonly BoardForm boardForm;
         readonly WorkForm workForm;
 
+        // 컨트롤러 생성시 폼 연결
         public WorkFormController(BoardForm _boardForm, WorkForm _workForm)
         {
             boardForm = _boardForm;
             workForm = _workForm;
         }
 
-        public void DeleteWork()
+        // 일정 삭제
+        // 보드 폼에서 현재 클릭한 일정데이터, 라벨 삭제
+        public void DeleteWorkData()
         {
             BoardData data = boardForm.CBoardForm.BoardData;
             int tabIdx = boardForm.TabControl.SelectedIndex;
 
-            WorkData.Delete(boardForm);
+            WorkData.DeleteLabel(boardForm);
 
             WorkData tmp = null;
             foreach (var item in data.Tabs[tabIdx].Works)
             {
-                if (item.MyIndex == boardForm.CBoardForm.WorkIndex)
+                if (item.MyID == boardForm.CBoardForm.CurrentWorkIndex)
                 {
                     tmp = item;
                     break;
@@ -32,27 +35,28 @@ namespace SimplePlanner.Controller
             }
 
             data.Tabs[tabIdx].Works.Remove(tmp);
-
-            WorkData.Update(boardForm);
+            WorkData.UpdateLabelLocation(boardForm);
         }
 
-        public void SendValue()
+        // 일정 폼 호출 시
+        // 기존 일정 라벨을 클릭했으면 일정 업데이트
+        // 새 일정을 클릭했다면 새 일정 추가
+        public void UpdateWorkData()
         {
             boardForm.CBoardForm.CurrentWork.WorkName = workForm.WorkName;
             boardForm.CBoardForm.CurrentWork.WorkContent = workForm.WorkContent;
 
-            if (!boardForm.CBoardForm.IsClicked)
+            if (boardForm.CBoardForm.isLabel)
             {
-                boardForm.CBoardForm.CreateWork();
+                boardForm.CBoardForm.UpdateWork();
             }
             else
             {
-                boardForm.CBoardForm.UpdateWork();
+                boardForm.CBoardForm.CreateWork();
             }
 
             boardForm.CBoardForm.CurrentWork.WorkName = workForm.WorkName = "";
             boardForm.CBoardForm.CurrentWork.WorkContent = workForm.WorkContent = "";
         }
-
     }
 }
