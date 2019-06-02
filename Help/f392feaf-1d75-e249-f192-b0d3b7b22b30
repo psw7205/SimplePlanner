@@ -1,0 +1,23 @@
+# TabEditForm.Link Method 
+ 
+
+**Namespace:**&nbsp;<a href="58fad1ed-8ae0-5137-7e5a-cfda55210c41">SimplePlanner.View</a><br />**Assembly:**&nbsp;SimplePlanner (in SimplePlanner.exe) Version: 1.0.0.0 (1.0.0.0)
+
+## Syntax
+
+**C#**<br />
+``` C#
+public void Link(
+	TabEditFormController _CTabEditForm
+)
+```
+
+
+#### Parameters
+&nbsp;<dl><dt>_CTabEditForm</dt><dd>Type: <a href="0c8bfec7-02a8-6c01-471a-6a92351aae3d">SimplePlanner.Controller.TabEditFormController</a><br /></dd></dl>
+
+## See Also
+
+
+#### Reference
+<a href="127ca72a-b002-9628-f743-f46bc57885aa">TabEditForm Class</a><br /><a href="58fad1ed-8ae0-5137-7e5a-cfda55210c41">SimplePlanner.View Namespace</a><br />

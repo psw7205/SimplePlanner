@@ -1,0 +1,21 @@
+# BoardForm.CTabForm Field
+ 
+
+**Namespace:**&nbsp;<a href="58fad1ed-8ae0-5137-7e5a-cfda55210c41">SimplePlanner.View</a><br />**Assembly:**&nbsp;SimplePlanner (in SimplePlanner.exe) Version: 1.0.0.0 (1.0.0.0)
+
+## Syntax
+
+**C#**<br />
+``` C#
+public TabEditFormController CTabForm
+```
+
+
+#### Field Value
+Type: <a href="0c8bfec7-02a8-6c01-471a-6a92351aae3d">TabEditFormController</a>
+
+## See Also
+
+
+#### Reference
+<a href="2598ddfb-2bdf-db1b-81e6-4716d956b3d2">BoardForm Class</a><br /><a href="58fad1ed-8ae0-5137-7e5a-cfda55210c41">SimplePlanner.View Namespace</a><br />

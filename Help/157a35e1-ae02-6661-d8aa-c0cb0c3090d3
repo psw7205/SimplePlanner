@@ -1,0 +1,23 @@
+# BoardFormController.CurrentWork Field
+ 
+
+현재 클릭한 일정 정보
+
+**Namespace:**&nbsp;<a href="01d1c102-1b5b-fcaa-2bc2-68487aa1825b">SimplePlanner.Controller</a><br />**Assembly:**&nbsp;SimplePlanner (in SimplePlanner.exe) Version: 1.0.0.0 (1.0.0.0)
+
+## Syntax
+
+**C#**<br />
+``` C#
+public WorkData CurrentWork
+```
+
+
+#### Field Value
+Type: <a href="d936527b-961a-1a6b-8b0f-401282ea6309">WorkData</a>
+
+## See Also
+
+
+#### Reference
+<a href="c26305b8-c25d-4ff7-18c3-6b6c9ac767f3">BoardFormController Class</a><br /><a href="01d1c102-1b5b-fcaa-2bc2-68487aa1825b">SimplePlanner.Controller Namespace</a><br />

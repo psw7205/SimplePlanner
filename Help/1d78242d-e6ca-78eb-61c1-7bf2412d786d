@@ -1,0 +1,26 @@
+# WorkFormController Constructor 
+ 
+
+컨트롤러 생성시 폼 연결
+
+**Namespace:**&nbsp;<a href="01d1c102-1b5b-fcaa-2bc2-68487aa1825b">SimplePlanner.Controller</a><br />**Assembly:**&nbsp;SimplePlanner (in SimplePlanner.exe) Version: 1.0.0.0 (1.0.0.0)
+
+## Syntax
+
+**C#**<br />
+``` C#
+public WorkFormController(
+	BoardForm _boardForm,
+	WorkForm _workForm
+)
+```
+
+
+#### Parameters
+&nbsp;<dl><dt>_boardForm</dt><dd>Type: <a href="2598ddfb-2bdf-db1b-81e6-4716d956b3d2">SimplePlanner.View.BoardForm</a><br /></dd><dt>_workForm</dt><dd>Type: <a href="99370517-bbfe-8044-271f-5a7e7143b919">SimplePlanner.View.WorkForm</a><br /></dd></dl>
+
+## See Also
+
+
+#### Reference
+<a href="5e767c83-807c-b038-03a5-271775fc5986">WorkFormController Class</a><br /><a href="01d1c102-1b5b-fcaa-2bc2-68487aa1825b">SimplePlanner.Controller Namespace</a><br />

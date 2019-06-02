@@ -1,0 +1,25 @@
+# DataController.SerializeData Method 
+ 
+
+데이터 직렬화, Data.dat 파일로 저장
+
+**Namespace:**&nbsp;<a href="01d1c102-1b5b-fcaa-2bc2-68487aa1825b">SimplePlanner.Controller</a><br />**Assembly:**&nbsp;SimplePlanner (in SimplePlanner.exe) Version: 1.0.0.0 (1.0.0.0)
+
+## Syntax
+
+**C#**<br />
+``` C#
+public void SerializeData(
+	BoardData data
+)
+```
+
+
+#### Parameters
+&nbsp;<dl><dt>data</dt><dd>Type: <a href="7d071be6-9c45-9a7e-1fc5-2bf38c487a30">SimplePlanner.Model.BoardData</a><br /></dd></dl>
+
+## See Also
+
+
+#### Reference
+<a href="7b8b33f7-5387-fb65-135b-04bebff83957">DataController Class</a><br /><a href="01d1c102-1b5b-fcaa-2bc2-68487aa1825b">SimplePlanner.Controller Namespace</a><br />

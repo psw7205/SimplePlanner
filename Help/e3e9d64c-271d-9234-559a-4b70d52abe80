@@ -1,0 +1,17 @@
+# BoardForm.Dispose Method 
+ 
+
+
+## Overload List
+&nbsp;<table><tr><th></th><th>Name</th><th>Description</th></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="http://msdn2.microsoft.com/en-us/library/3cc9y48w" target="_blank">Dispose()</a></td><td>
+Releases all resources used by the <a href="http://msdn2.microsoft.com/en-us/library/9wbadbce" target="_blank">Component</a>.
+ (Inherited from <a href="http://msdn2.microsoft.com/en-us/library/9wbadbce" target="_blank">Component</a>.)</td></tr><tr><td>![Protected method](media/protmethod.gif "Protected method")</td><td><a href="e1806324-f043-bd8f-6c57-750fa5700cc6">Dispose(Boolean)</a></td><td>
+사용 중인 모든 리소스를 정리합니다.
+ (Overrides <a href="http://msdn2.microsoft.com/en-us/library/aw58wzka" target="_blank">Form.Dispose(Boolean)</a>.)</td></tr></table>&nbsp;
+<a href="#boardform.dispose-method">Back to Top</a>
+
+## See Also
+
+
+#### Reference
+<a href="2598ddfb-2bdf-db1b-81e6-4716d956b3d2">BoardForm Class</a><br /><a href="58fad1ed-8ae0-5137-7e5a-cfda55210c41">SimplePlanner.View Namespace</a><br />

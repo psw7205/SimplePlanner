@@ -1,0 +1,60 @@
+# BoardFormController Class
+ 
+
+
+## Inheritance Hierarchy
+<a href="http://msdn2.microsoft.com/en-us/library/e5kfa45b" target="_blank">System.Object</a><br />&nbsp;&nbsp;SimplePlanner.Controller.BoardFormController<br />
+**Namespace:**&nbsp;<a href="01d1c102-1b5b-fcaa-2bc2-68487aa1825b">SimplePlanner.Controller</a><br />**Assembly:**&nbsp;SimplePlanner (in SimplePlanner.exe) Version: 1.0.0.0 (1.0.0.0)
+
+## Syntax
+
+**C#**<br />
+``` C#
+public class BoardFormController
+```
+
+The BoardFormController type exposes the following members.
+
+
+## Constructors
+&nbsp;<table><tr><th></th><th>Name</th><th>Description</th></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="2e0dd09f-76d2-6563-b171-565e5c5a13da">BoardFormController</a></td><td>
+생성자 컨트롤러 생성 시 보드 폼, 일정 폼을 컨트롤러와 연결</td></tr></table>&nbsp;
+<a href="#boardformcontroller-class">Back to Top</a>
+
+## Methods
+&nbsp;<table><tr><th></th><th>Name</th><th>Description</th></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="81150976-537c-e31d-08a2-740dcf3e6f74">AddTabData</a></td><td>
+보드 폼에서 새 탭을 추가하는 경우 보드 데이터 추가, 탭 추가</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="fb9ced6d-dcf9-519e-3aa1-5a35534686f5">CreateWork</a></td><td>
+새 일정을 만들 때 호출 현재 탭 데이터를 가져와 일정 추가</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="fdc8acf0-51d2-4b6e-043b-b95dd5bf80f7">DelTabData</a></td><td>
+탭 데이터 삭제</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="http://msdn2.microsoft.com/en-us/library/bsc2ak47" target="_blank">Equals</a></td><td>
+Determines whether the specified object is equal to the current object.
+ (Inherited from <a href="http://msdn2.microsoft.com/en-us/library/e5kfa45b" target="_blank">Object</a>.)</td></tr><tr><td>![Protected method](media/protmethod.gif "Protected method")</td><td><a href="http://msdn2.microsoft.com/en-us/library/4k87zsw7" target="_blank">Finalize</a></td><td>
+Allows an object to try to free resources and perform other cleanup operations before it is reclaimed by garbage collection.
+ (Inherited from <a href="http://msdn2.microsoft.com/en-us/library/e5kfa45b" target="_blank">Object</a>.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="http://msdn2.microsoft.com/en-us/library/zdee4b3y" target="_blank">GetHashCode</a></td><td>
+Serves as the default hash function.
+ (Inherited from <a href="http://msdn2.microsoft.com/en-us/library/e5kfa45b" target="_blank">Object</a>.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="http://msdn2.microsoft.com/en-us/library/dfwy45w9" target="_blank">GetType</a></td><td>
+Gets the <a href="http://msdn2.microsoft.com/en-us/library/42892f65" target="_blank">Type</a> of the current instance.
+ (Inherited from <a href="http://msdn2.microsoft.com/en-us/library/e5kfa45b" target="_blank">Object</a>.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="9a3a4f46-3fd8-019f-e6e4-4e37eb2772fe">Init</a></td><td>
+프로그램 최초 실행 시 기본 탭 생성 기존에 데이터가 있는 경우 실행 X</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="31aa4230-46f5-6207-9183-d4f953c9a905">LabelClick</a></td><td>
+라벨이 클릭 될 때 호출되는 함수</td></tr><tr><td>![Protected method](media/protmethod.gif "Protected method")</td><td><a href="http://msdn2.microsoft.com/en-us/library/57ctke0a" target="_blank">MemberwiseClone</a></td><td>
+Creates a shallow copy of the current <a href="http://msdn2.microsoft.com/en-us/library/e5kfa45b" target="_blank">Object</a>.
+ (Inherited from <a href="http://msdn2.microsoft.com/en-us/library/e5kfa45b" target="_blank">Object</a>.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="3120a966-3b2d-524a-4819-99933252dc97">MoveBtn</a></td><td>
+새 일정 버튼이 현재 탭에 위치하도록 이동</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="808c3b18-fc9d-ec8d-9819-8345206ac360">OpenWorkForm</a></td><td>
+보드 폼에서 일정 폼을 열 때</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="http://msdn2.microsoft.com/en-us/library/7bxwbwt2" target="_blank">ToString</a></td><td>
+Returns a string that represents the current object.
+ (Inherited from <a href="http://msdn2.microsoft.com/en-us/library/e5kfa45b" target="_blank">Object</a>.)</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="2abd4509-941c-6b6b-1763-e48c364d7ccb">UpdateTabData</a></td><td>
+탭 데이터 변경</td></tr><tr><td>![Public method](media/pubmethod.gif "Public method")</td><td><a href="f8ee19bd-ae97-b12a-5d3f-274dd2dbd606">UpdateWork</a></td><td>
+기존 일정을 수정할 때 호출되는 함수 현재 클릭된 라벨을 찾아 해당 라벨의 Text 수정</td></tr></table>&nbsp;
+<a href="#boardformcontroller-class">Back to Top</a>
+
+## Fields
+&nbsp;<table><tr><th></th><th>Name</th><th>Description</th></tr><tr><td>![Public field](media/pubfield.gif "Public field")</td><td><a href="802381ae-c7a0-0599-841c-89592a7fce83">BoardData</a></td><td>
+관리할 데이터</td></tr><tr><td>![Public field](media/pubfield.gif "Public field")</td><td><a href="da1a35cd-c6a6-b099-2457-b70c60854aaa">CurrentLabel</a></td><td /></tr><tr><td>![Public field](media/pubfield.gif "Public field")</td><td><a href="157a35e1-ae02-6661-d8aa-c0cb0c3090d3">CurrentWork</a></td><td>
+현재 클릭한 일정 정보</td></tr><tr><td>![Public field](media/pubfield.gif "Public field")</td><td><a href="9d9b4fcb-ec0e-6326-fa1a-9e04fe6d4613">CurrentWorkIndex</a></td><td /></tr><tr><td>![Public field](media/pubfield.gif "Public field")</td><td><a href="6f314da2-f00f-3bd4-fdb5-6ee77d2a0c02">isLabel</a></td><td>
+클릭한 게 새 일정 버튼인지 일정 라벨인지 구분할 flag</td></tr></table>&nbsp;
+<a href="#boardformcontroller-class">Back to Top</a>
+
+## See Also
+
+
+#### Reference
+<a href="01d1c102-1b5b-fcaa-2bc2-68487aa1825b">SimplePlanner.Controller Namespace</a><br />

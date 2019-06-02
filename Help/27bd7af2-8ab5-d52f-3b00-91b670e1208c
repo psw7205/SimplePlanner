@@ -1,0 +1,25 @@
+# WorkData.DeleteLabel Method 
+ 
+
+일정라벨 삭제
+
+**Namespace:**&nbsp;<a href="69154b3e-94f5-3ded-5607-f19f1dffa32f">SimplePlanner.Model</a><br />**Assembly:**&nbsp;SimplePlanner (in SimplePlanner.exe) Version: 1.0.0.0 (1.0.0.0)
+
+## Syntax
+
+**C#**<br />
+``` C#
+public static void DeleteLabel(
+	BoardForm boardForm
+)
+```
+
+
+#### Parameters
+&nbsp;<dl><dt>boardForm</dt><dd>Type: <a href="2598ddfb-2bdf-db1b-81e6-4716d956b3d2">SimplePlanner.View.BoardForm</a><br /></dd></dl>
+
+## See Also
+
+
+#### Reference
+<a href="d936527b-961a-1a6b-8b0f-401282ea6309">WorkData Class</a><br /><a href="69154b3e-94f5-3ded-5607-f19f1dffa32f">SimplePlanner.Model Namespace</a><br />

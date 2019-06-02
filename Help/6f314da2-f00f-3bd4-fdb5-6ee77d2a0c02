@@ -1,0 +1,23 @@
+# BoardFormController.isLabel Field
+ 
+
+클릭한 게 새 일정 버튼인지 일정 라벨인지 구분할 flag
+
+**Namespace:**&nbsp;<a href="01d1c102-1b5b-fcaa-2bc2-68487aa1825b">SimplePlanner.Controller</a><br />**Assembly:**&nbsp;SimplePlanner (in SimplePlanner.exe) Version: 1.0.0.0 (1.0.0.0)
+
+## Syntax
+
+**C#**<br />
+``` C#
+public bool isLabel
+```
+
+
+#### Field Value
+Type: <a href="http://msdn2.microsoft.com/en-us/library/a28wyd50" target="_blank">Boolean</a>
+
+## See Also
+
+
+#### Reference
+<a href="c26305b8-c25d-4ff7-18c3-6b6c9ac767f3">BoardFormController Class</a><br /><a href="01d1c102-1b5b-fcaa-2bc2-68487aa1825b">SimplePlanner.Controller Namespace</a><br />

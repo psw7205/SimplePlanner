@@ -1,0 +1,25 @@
+# TabEditForm.Dispose Method (Boolean)
+ 
+
+Clean up any resources being used.
+
+**Namespace:**&nbsp;<a href="58fad1ed-8ae0-5137-7e5a-cfda55210c41">SimplePlanner.View</a><br />**Assembly:**&nbsp;SimplePlanner (in SimplePlanner.exe) Version: 1.0.0.0 (1.0.0.0)
+
+## Syntax
+
+**C#**<br />
+``` C#
+protected override void Dispose(
+	bool disposing
+)
+```
+
+
+#### Parameters
+&nbsp;<dl><dt>disposing</dt><dd>Type: <a href="http://msdn2.microsoft.com/en-us/library/a28wyd50" target="_blank">System.Boolean</a><br />true if managed resources should be disposed; otherwise, false.</dd></dl>
+
+## See Also
+
+
+#### Reference
+<a href="127ca72a-b002-9628-f743-f46bc57885aa">TabEditForm Class</a><br /><a href="3a485209-6701-51b3-c875-1b5ef015322d">Dispose Overload</a><br /><a href="58fad1ed-8ae0-5137-7e5a-cfda55210c41">SimplePlanner.View Namespace</a><br />
