@@ -1,6 +1,6 @@
 # simplePlanner
 
-[help](./Help/Home.md)
+[help](./Documentation.pdf)
 
 ![CodeMap](./img/CodeMap.jpg)
 
