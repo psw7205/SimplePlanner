@@ -1,7 +1,5 @@
 # simplePlanner
 
-**[Help](./Help/Home.md)**
-
 ![CodeMap](./img/CodeMap.jpg)
 
 ## Model
