@@ -17,7 +17,7 @@ namespace SimplePlanner.View
         public DataController CData;
 
         public Button CreateWorkBtn { get; }
-        
+
         public TabControl TabControl
         {
             get { return tabControl; }
