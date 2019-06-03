@@ -58,6 +58,7 @@ namespace SimplePlanner.Model
         {
             int tabIndex = boardForm.TabControl.SelectedIndex;
             TabPage tabPage = boardForm.TabControl.TabPages[tabIndex];
+            WorkData.ID++;
 
             Label newWork = new Label
             {
@@ -69,7 +70,6 @@ namespace SimplePlanner.Model
                 BorderStyle = BorderStyle.FixedSingle,
                 TextAlign = ContentAlignment.MiddleCenter
             };
-            WorkData.ID++;
 
             newWork.Click += (s, e) =>
             {
