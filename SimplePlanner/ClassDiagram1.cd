@@ -45,7 +45,7 @@
   <Class Name="SimplePlanner.Model.WorkData">
     <Position X="4" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAACAAAgAAAgAAAAAABAAAAAACAAABggUAAAAA=</HashCode>
+      <HashCode>AAAAAAAACAAAgAAAgAAAAAABAAAAAACBAABggEAAAAA=</HashCode>
       <FileName>Model\WorkData.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -62,7 +62,7 @@
       <Field Name="tabControl" Hidden="true" />
     </Members>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAwCAAQQAAoACBAAgCBAYEAAACgAIAAACAAAI=</HashCode>
+      <HashCode>AAAQAAAAwCAAQQgAoACBAAgCBAYEAAACgAIAAACAAAI=</HashCode>
       <FileName>View\BoardForm.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -92,7 +92,7 @@
       <Field Name="OK" Hidden="true" />
     </Members>
     <TypeIdentifier>
-      <HashCode>AAAAAAIAACBAABACgICAAAACBAACAAAAAAABSXAAAAA=</HashCode>
+      <HashCode>AEAAAAIAACBAABACgICAAAACBAACAAABAAABSHAAAAA=</HashCode>
       <FileName>View\WorkForm.cs</FileName>
     </TypeIdentifier>
   </Class>

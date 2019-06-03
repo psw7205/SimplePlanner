@@ -128,5 +128,10 @@ namespace SimplePlanner.View
         {
             CBoardForm.DelTabData();
         }
+
+        private void materialFlatButton1_Click(object sender, EventArgs e)
+        {
+            (new CalendarForm(CBoardForm.BoardData)).ShowDialog();
+        }
     }
 }

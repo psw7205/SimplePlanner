@@ -60,8 +60,7 @@ namespace SimplePlanner.Model
             int tabIndex = boardForm.TabControl.SelectedIndex;
             TabPage tabPage = boardForm.TabControl.TabPages[tabIndex];
             tabPage.AutoScroll = true;
-
-            WorkData.ID++;
+            
             Label newWork = new Label
             {
                 Name = "Work" + workData.MyID,

@@ -33,6 +33,7 @@
             this.EditBtn = new MaterialSkin.Controls.MaterialFlatButton();
             this.tabControl = new MetroFramework.Controls.MetroTabControl();
             this.DelBtn = new MaterialSkin.Controls.MaterialFlatButton();
+            this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
             this.SuspendLayout();
             // 
             // boardName
@@ -105,11 +106,28 @@
             this.DelBtn.UseVisualStyleBackColor = true;
             this.DelBtn.Click += new System.EventHandler(this.DelBtn_Click);
             // 
+            // materialFlatButton1
+            // 
+            this.materialFlatButton1.AutoSize = true;
+            this.materialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton1.Depth = 0;
+            this.materialFlatButton1.Location = new System.Drawing.Point(954, 4);
+            this.materialFlatButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFlatButton1.Name = "materialFlatButton1";
+            this.materialFlatButton1.Primary = false;
+            this.materialFlatButton1.Size = new System.Drawing.Size(100, 36);
+            this.materialFlatButton1.TabIndex = 7;
+            this.materialFlatButton1.Text = "Calendar";
+            this.materialFlatButton1.UseVisualStyleBackColor = true;
+            this.materialFlatButton1.Click += new System.EventHandler(this.materialFlatButton1_Click);
+            // 
             // BoardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 605);
+            this.Controls.Add(this.materialFlatButton1);
             this.Controls.Add(this.DelBtn);
             this.Controls.Add(this.EditBtn);
             this.Controls.Add(this.AddBtn);
@@ -131,6 +149,7 @@
         private MaterialSkin.Controls.MaterialFlatButton EditBtn;
         private MetroFramework.Controls.MetroTabControl tabControl;
         private MaterialSkin.Controls.MaterialFlatButton DelBtn;
+        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton1;
     }
 }
 

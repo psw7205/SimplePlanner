@@ -8,7 +8,7 @@ namespace SimplePlanner.Model
     [Serializable]
     public class WorkData
     {
-        public static int ID;
+        public Random ID;
         public int MyID;
         public bool IsClicked;
         public System.Drawing.Color Color;
@@ -16,11 +16,11 @@ namespace SimplePlanner.Model
 
         public WorkData(string _name = "", string _content = "")
         {
+            ID = new Random();
             WorkName = _name;
             WorkContent = _content;
-            MyID = ID;
+            MyID = ID.Next();
             Color = Color.White;
-            ID++;
             IsClicked = false;
             Date = DateTime.Today;
         }
