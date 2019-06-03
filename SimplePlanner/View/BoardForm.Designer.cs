@@ -28,27 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.boardName = new System.Windows.Forms.Label();
-            this.AddBtn = new System.Windows.Forms.Button();
-            this.EditBtn = new System.Windows.Forms.Button();
-            this.tabControl = new System.Windows.Forms.TabControl();
-            this.DelBtn = new System.Windows.Forms.Button();
+            this.boardName = new MaterialSkin.Controls.MaterialLabel();
+            this.AddBtn = new MaterialSkin.Controls.MaterialFlatButton();
+            this.EditBtn = new MaterialSkin.Controls.MaterialFlatButton();
+            this.tabControl = new MetroFramework.Controls.MetroTabControl();
+            this.DelBtn = new MaterialSkin.Controls.MaterialFlatButton();
             this.SuspendLayout();
             // 
             // boardName
             // 
             this.boardName.AutoSize = true;
-            this.boardName.Location = new System.Drawing.Point(16, 13);
+            this.boardName.Depth = 0;
+            this.boardName.Font = new System.Drawing.Font("Roboto", 11F);
+            this.boardName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.boardName.Location = new System.Drawing.Point(20, 14);
+            this.boardName.MouseState = MaterialSkin.MouseState.HOVER;
             this.boardName.Name = "boardName";
-            this.boardName.Size = new System.Drawing.Size(97, 15);
+            this.boardName.Size = new System.Drawing.Size(125, 24);
             this.boardName.TabIndex = 1;
             this.boardName.Text = "BOARDNAME";
             // 
             // AddBtn
             // 
-            this.AddBtn.Location = new System.Drawing.Point(154, 13);
+            this.AddBtn.AutoSize = true;
+            this.AddBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.AddBtn.Depth = 0;
+            this.AddBtn.Location = new System.Drawing.Point(152, 4);
+            this.AddBtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.AddBtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(75, 23);
+            this.AddBtn.Primary = false;
+            this.AddBtn.Size = new System.Drawing.Size(47, 36);
             this.AddBtn.TabIndex = 2;
             this.AddBtn.Text = "ADD";
             this.AddBtn.UseVisualStyleBackColor = true;
@@ -56,9 +66,15 @@
             // 
             // EditBtn
             // 
-            this.EditBtn.Location = new System.Drawing.Point(236, 13);
+            this.EditBtn.AutoSize = true;
+            this.EditBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.EditBtn.Depth = 0;
+            this.EditBtn.Location = new System.Drawing.Point(207, 2);
+            this.EditBtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.EditBtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.EditBtn.Name = "EditBtn";
-            this.EditBtn.Size = new System.Drawing.Size(75, 23);
+            this.EditBtn.Primary = false;
+            this.EditBtn.Size = new System.Drawing.Size(49, 36);
             this.EditBtn.TabIndex = 3;
             this.EditBtn.Text = "EDIT";
             this.EditBtn.UseVisualStyleBackColor = true;
@@ -68,16 +84,22 @@
             // 
             this.tabControl.Location = new System.Drawing.Point(12, 49);
             this.tabControl.Name = "tabControl";
-            this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(776, 389);
+            this.tabControl.Size = new System.Drawing.Size(1043, 544);
             this.tabControl.TabIndex = 0;
+            this.tabControl.UseSelectable = true;
             this.tabControl.Selected += new System.Windows.Forms.TabControlEventHandler(this.TabControl_Selected);
             // 
             // DelBtn
             // 
-            this.DelBtn.Location = new System.Drawing.Point(317, 12);
+            this.DelBtn.AutoSize = true;
+            this.DelBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.DelBtn.Depth = 0;
+            this.DelBtn.Location = new System.Drawing.Point(264, 2);
+            this.DelBtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.DelBtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.DelBtn.Name = "DelBtn";
-            this.DelBtn.Size = new System.Drawing.Size(75, 23);
+            this.DelBtn.Primary = false;
+            this.DelBtn.Size = new System.Drawing.Size(43, 36);
             this.DelBtn.TabIndex = 4;
             this.DelBtn.Text = "DEL";
             this.DelBtn.UseVisualStyleBackColor = true;
@@ -87,7 +109,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 605);
             this.Controls.Add(this.DelBtn);
             this.Controls.Add(this.EditBtn);
             this.Controls.Add(this.AddBtn);
@@ -104,11 +126,11 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label boardName;
-        private System.Windows.Forms.Button AddBtn;
-        private System.Windows.Forms.Button EditBtn;
-        private System.Windows.Forms.TabControl tabControl;
-        private System.Windows.Forms.Button DelBtn;
+        private MaterialSkin.Controls.MaterialLabel boardName;
+        private MaterialSkin.Controls.MaterialFlatButton AddBtn;
+        private MaterialSkin.Controls.MaterialFlatButton EditBtn;
+        private MetroFramework.Controls.MetroTabControl tabControl;
+        private MaterialSkin.Controls.MaterialFlatButton DelBtn;
     }
 }
 

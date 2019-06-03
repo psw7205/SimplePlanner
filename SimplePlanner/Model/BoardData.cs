@@ -40,7 +40,13 @@ namespace SimplePlanner.Model
         /// <param name="boardForm"></param>
         public void DelTab(BoardForm boardForm)
         {
+            int idx = boardForm.TabControl.SelectedIndex - 1;
             boardForm.TabControl.TabPages.Remove(boardForm.TabControl.SelectedTab);
+
+            if (idx < 0)
+                idx = 0;
+
+            boardForm.TabControl.SelectTab(idx);
         }
         
         /// <summary>

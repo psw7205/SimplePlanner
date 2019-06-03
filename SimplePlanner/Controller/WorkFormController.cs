@@ -25,23 +25,26 @@ namespace SimplePlanner.Controller
         /// </summary>
         public void DeleteWorkData()
         {
-            BoardData data = boardForm.CBoardForm.BoardData;
-            int tabIdx = boardForm.TabControl.SelectedIndex;
-
-            WorkData.DeleteLabel(boardForm);
-
-            WorkData tmp = null;
-            foreach (var item in data.Tabs[tabIdx].Works)
+            if (boardForm.CBoardForm.isLabel)
             {
-                if (item.MyID == boardForm.CBoardForm.CurrentWorkIndex)
-                {
-                    tmp = item;
-                    break;
-                }
-            }
+                BoardData data = boardForm.CBoardForm.BoardData;
+                int tabIdx = boardForm.TabControl.SelectedIndex;
 
-            data.Tabs[tabIdx].Works.Remove(tmp);
-            WorkData.UpdateLabelLocation(boardForm);
+                WorkData.DeleteLabel(boardForm);
+
+                WorkData tmp = null;
+                foreach (var item in data.Tabs[tabIdx].Works)
+                {
+                    if (item.MyID == boardForm.CBoardForm.CurrentWorkIndex)
+                    {
+                        tmp = item;
+                        break;
+                    }
+                }
+
+                data.Tabs[tabIdx].Works.Remove(tmp);
+                WorkData.UpdateLabelLocation(boardForm);
+            }
         }
 
         /// <summary>
@@ -54,6 +57,7 @@ namespace SimplePlanner.Controller
             boardForm.CBoardForm.CurrentWork.WorkName = workForm.WorkName;
             boardForm.CBoardForm.CurrentWork.WorkContent = workForm.WorkContent;
             boardForm.CBoardForm.CurrentWork.Color = workForm.colorLabel.BackColor;
+            boardForm.CBoardForm.CurrentWork.date = workForm.date;
 
             if (boardForm.CBoardForm.isLabel)
             {

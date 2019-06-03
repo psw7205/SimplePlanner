@@ -19,7 +19,7 @@ namespace SimplePlanner.Model
 
         public string TabName { get; set; }
         public List<WorkData> Works { get; set; }
-
+        public int ColCount { get; set; }
         /// <summary>
         /// 일정 데이터 추가시 보드 폼에서 일정 라벨 추가
         /// </summary>
@@ -28,14 +28,15 @@ namespace SimplePlanner.Model
         {
             int tabIndex = boardForm.TabControl.SelectedIndex;
             TabPage tabPage = boardForm.TabControl.TabPages[tabIndex];
+            tabPage.AutoScroll = true;
 
             Label newWork = new Label
             {
                 Name = "Work" + Works.Last().MyID,
                 Text = Works.Last().WorkName,
                 BackColor = Works.Last().Color,
-                Size = new Size(100, 30),
-                Location = new Point(5, 50 + (35 * (Works.Count - 1))),
+                Size = new Size(150, 50),
+                Location = new Point(5, 50 + (70 * (Works.Count - 1))),
                 BorderStyle = BorderStyle.FixedSingle,
                 TextAlign = ContentAlignment.MiddleCenter
             };
@@ -58,15 +59,16 @@ namespace SimplePlanner.Model
         {
             int tabIndex = boardForm.TabControl.SelectedIndex;
             TabPage tabPage = boardForm.TabControl.TabPages[tabIndex];
-            WorkData.ID++;
+            tabPage.AutoScroll = true;
 
+            WorkData.ID++;
             Label newWork = new Label
             {
                 Name = "Work" + workData.MyID,
                 Text = workData.WorkName,
                 BackColor = workData.Color,
-                Size = new Size(100, 30),
-                Location = new Point(5, 50 + (35 * i)),
+                Size = new Size(150, 50),
+                Location = new Point(5, 50 + (70 * i)),
                 BorderStyle = BorderStyle.FixedSingle,
                 TextAlign = ContentAlignment.MiddleCenter
             };

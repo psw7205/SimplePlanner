@@ -20,7 +20,7 @@ namespace SimplePlanner.Controller
         {
             tabEditForm.NewTabName = "";
             DialogResult result = tabEditForm.ShowDialog();
-            if (result.Equals(DialogResult.OK))
+            if (result.Equals(DialogResult.Cancel))
                 return "";
 
             return tabEditForm.NewTabName;

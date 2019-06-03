@@ -12,6 +12,7 @@ namespace SimplePlanner.Model
         public int MyID;
         public bool IsClicked;
         public System.Drawing.Color Color;
+        public DateTime date;
 
         public WorkData(string _name = "", string _content = "")
         {
@@ -21,6 +22,7 @@ namespace SimplePlanner.Model
             Color = Color.White;
             ID++;
             IsClicked = false;
+            date = DateTime.Today;
         }
 
         public string WorkName { get; set; }
@@ -48,7 +50,7 @@ namespace SimplePlanner.Model
             {
                 if (item is Label tmp)
                 {
-                    tmp.Location = new Point(5, 50 + (35 * i));
+                    tmp.Location = new Point(5, 50 + (70 * i));
                     i++;
                 }
             }

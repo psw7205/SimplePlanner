@@ -21,7 +21,6 @@ namespace SimplePlanner.View
         public TabControl TabControl
         {
             get { return tabControl; }
-            set { tabControl = value; }
         }
 
         /// <summary>
@@ -39,7 +38,8 @@ namespace SimplePlanner.View
                 Size = new Size(100, 30),
                 Location = new Point(10, 10),
                 Text = "새 일정",
-                Name = "MakeNewWorkButton"
+                Name = "MakeNewWorkButton",
+                UseVisualStyleBackColor = true
             };
 
             CreateWorkBtn.Click += (s, e) =>
@@ -115,7 +115,7 @@ namespace SimplePlanner.View
         private void EditBtn_Click(object sender, EventArgs e)
         {
             string name = CTabForm.OpenTabEditForm();
-            if(name != "")
+            if (name != "")
                 CBoardForm.UpdateTabData(name);
         }
 

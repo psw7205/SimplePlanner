@@ -7,6 +7,7 @@ namespace SimplePlanner.View
     public partial class WorkForm : Form
     {
         WorkFormController CWorkForm;
+        public bool flag;
 
         /// <summary>
         /// 일정 이름
@@ -15,6 +16,12 @@ namespace SimplePlanner.View
         {
             get { return nameTextBox.Text; }
             set { nameTextBox.Text = value; }
+        }
+
+        public DateTime date
+        {
+            get { return dateTime.Value; }
+            set { dateTime.Value = value; }
         }
 
         /// <summary>
@@ -29,6 +36,7 @@ namespace SimplePlanner.View
         public WorkForm()
         {
             InitializeComponent();
+            flag = false;
         }
 
         public void Link(WorkFormController _CWorkForm)
@@ -60,13 +68,14 @@ namespace SimplePlanner.View
         /// <param name="e"></param>
         private void DelBtn_Click(object sender, EventArgs e)
         {
-            if (WorkName != "" && WorkContent != "")
+            if (WorkName != "")
             {
                 CWorkForm.DeleteWorkData();
             }
 
             WorkName = "";
             WorkContent = "";
+            dateTime.ResetText();
             this.Close();
         }
 

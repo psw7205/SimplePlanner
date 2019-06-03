@@ -1,5 +1,6 @@
 ﻿using SimplePlanner.Model;
 using SimplePlanner.View;
+using System;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
@@ -75,6 +76,7 @@ namespace SimplePlanner.Controller
                         CurrentWork.WorkName = item.WorkName;
                         CurrentWork.WorkContent = item.WorkContent;
                         CurrentWork.Color = item.Color;
+                        CurrentWork.date = item.date;
                         break;
                     }
                 }
@@ -83,12 +85,14 @@ namespace SimplePlanner.Controller
             workForm.WorkName = CurrentWork.WorkName;
             workForm.WorkContent = CurrentWork.WorkContent;
             workForm.colorLabel.BackColor = CurrentWork.Color;
+            workForm.date = CurrentWork.date;
 
             workForm.ShowDialog();
 
             CurrentWork.WorkName = workForm.WorkName = "";
             CurrentWork.WorkContent = workForm.WorkContent = "";
             CurrentWork.Color = workForm.colorLabel.BackColor = System.Drawing.Color.White;
+            CurrentWork.date = workForm.date = DateTime.Today;
         }
 
 
@@ -143,7 +147,8 @@ namespace SimplePlanner.Controller
             TabData tabData = BoardData.Tabs.ElementAt(tabIndex);
             WorkData tmp = new WorkData(CurrentWork.WorkName, CurrentWork.WorkContent)
             {
-                Color = CurrentWork.Color
+                Color = CurrentWork.Color,
+                date = CurrentWork.date
             };
             tabData.Works.Add(tmp);
             tabData.AddWorkLabel(boardForm);
@@ -177,6 +182,8 @@ namespace SimplePlanner.Controller
                     item.WorkName = CurrentWork.WorkName;
                     item.WorkContent = CurrentWork.WorkContent;
                     item.Color = CurrentWork.Color;
+                    item.date = CurrentWork.date;
+
                     item.UpdateLabelText(boardForm);
                     break;
                 }
