@@ -14,8 +14,12 @@ namespace SimplePlanner.View
 {
     public partial class CalendarForm : Form
     {
-        private BoardData data;
+        private readonly BoardData data;
 
+        /// <summary>
+        /// 데이터를 불러와 캘린더에 적용
+        /// </summary>
+        /// <param name="_boardData"></param>
         public CalendarForm(BoardData _boardData)
         {
             InitializeComponent();

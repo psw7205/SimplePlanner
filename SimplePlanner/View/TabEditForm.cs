@@ -4,6 +4,9 @@ using System.Windows.Forms;
 
 namespace SimplePlanner.View
 {
+    /// <summary>
+    /// 탭 이름 입력 폼
+    /// </summary>
     public partial class TabEditForm : Form
     {
         public string NewTabName

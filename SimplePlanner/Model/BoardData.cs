@@ -5,6 +5,9 @@ using System.Windows.Forms;
 
 namespace SimplePlanner.Model
 {
+    /// <summary>
+    /// 보드 데이터
+    /// </summary>
     [Serializable]
     public class BoardData
     {

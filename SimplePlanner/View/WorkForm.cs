@@ -4,6 +4,9 @@ using System.Windows.Forms;
 
 namespace SimplePlanner.View
 {
+    /// <summary>
+    /// 일정 수정 폼
+    /// </summary>
     public partial class WorkForm : Form
     {
         WorkFormController CWorkForm;
@@ -79,6 +82,11 @@ namespace SimplePlanner.View
             this.Close();
         }
 
+        /// <summary>
+        /// Label의 색 변경
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ColorLabel_Click(object sender, EventArgs e)
         {
             DialogResult result = colorDialog.ShowDialog();

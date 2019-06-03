@@ -8,6 +8,9 @@ using System.Windows.Forms;
 
 namespace SimplePlanner.Model
 {
+    /// <summary>
+    /// 탭 데이터
+    /// </summary>
     [Serializable]
     public class TabData
     {

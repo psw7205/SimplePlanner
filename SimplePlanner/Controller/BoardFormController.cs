@@ -8,6 +8,9 @@ using System.Windows.Forms;
 
 namespace SimplePlanner.Controller
 {
+    /// <summary>
+    /// 보드 폼을 컨트롤하는 클래스
+    /// </summary>
     public class BoardFormController
     {
         readonly BoardForm boardForm;

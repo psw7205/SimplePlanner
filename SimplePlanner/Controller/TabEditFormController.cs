@@ -3,6 +3,9 @@ using System.Windows.Forms;
 
 namespace SimplePlanner.Controller
 {
+    /// <summary>
+    /// 탭 이름 변경 폼을 컨트롤 하는 클래스
+    /// </summary>
     public class TabEditFormController
     {
         readonly TabEditForm tabEditForm;

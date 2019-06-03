@@ -3,6 +3,9 @@ using SimplePlanner.View;
 
 namespace SimplePlanner.Controller
 {
+    /// <summary>
+    /// 일정 폼을 관리하는 클래스
+    /// </summary>
     public class WorkFormController
     {
         readonly BoardForm boardForm;

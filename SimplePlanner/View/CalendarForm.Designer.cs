@@ -56,7 +56,7 @@
             this.calendar1.ShowDisabledEvents = false;
             this.calendar1.ShowEventTooltips = true;
             this.calendar1.ShowTodayButton = true;
-            this.calendar1.Size = new System.Drawing.Size(1070, 573);
+            this.calendar1.Size = new System.Drawing.Size(776, 378);
             this.calendar1.TabIndex = 0;
             this.calendar1.TodayFont = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             // 
@@ -65,7 +65,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1099, 612);
+            this.ClientSize = new System.Drawing.Size(805, 417);
             this.Controls.Add(this.calendar1);
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "CalendarForm";

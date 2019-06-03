@@ -129,7 +129,13 @@ namespace SimplePlanner.View
             CBoardForm.DelTabData();
         }
 
-        private void materialFlatButton1_Click(object sender, EventArgs e)
+        /// <summary>
+        /// 캘린더 열기
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
+        private void CalendarClick(object sender, EventArgs e)
         {
             (new CalendarForm(CBoardForm.BoardData)).ShowDialog();
         }
