@@ -8,8 +8,8 @@ namespace SimplePlanner.View
 {
     public partial class BoardForm : Form
     {
-        readonly WorkForm workForm;
-        readonly TabEditForm tabEditForm;
+        private readonly WorkForm workForm;
+        private readonly TabEditForm tabEditForm;
 
         public BoardFormController CBoardForm;
         public WorkFormController CWorkForm;
@@ -17,11 +17,8 @@ namespace SimplePlanner.View
         public DataController CData;
 
         public Button CreateWorkBtn { get; }
-        
-        public TabControl TabControl
-        {
-            get { return tabControl; }
-        }
+
+        public TabControl TabControl => tabControl;
 
         /// <summary>
         /// 보드 폼 생성자, 프로그램 실행 시 최초 호출
@@ -83,7 +80,9 @@ namespace SimplePlanner.View
         {
             string name = CTabForm.OpenTabEditForm();
             if (name != "")
+            {
                 CBoardForm.AddTabData(name);
+            }
         }
 
         /// <summary>
@@ -116,7 +115,9 @@ namespace SimplePlanner.View
         {
             string name = CTabForm.OpenTabEditForm();
             if (name != "")
+            {
                 CBoardForm.UpdateTabData(name);
+            }
         }
 
         /// <summary>

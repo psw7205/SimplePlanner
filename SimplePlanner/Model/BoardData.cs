@@ -13,7 +13,7 @@ namespace SimplePlanner.Model
             BoardName = _name;
             Tabs = new List<TabData>();
         }
-        
+
         public string BoardName { get; set; }
         public List<TabData> Tabs { get; set; }
 
@@ -44,11 +44,13 @@ namespace SimplePlanner.Model
             boardForm.TabControl.TabPages.Remove(boardForm.TabControl.SelectedTab);
 
             if (idx < 0)
+            {
                 idx = 0;
+            }
 
             boardForm.TabControl.SelectTab(idx);
         }
-        
+
         /// <summary>
         /// 탭 이름 변경
         /// </summary>

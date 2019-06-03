@@ -34,8 +34,8 @@ namespace SimplePlanner.Model
         public void UpdateLabelText(BoardForm boardForm)
         {
             Label label = boardForm.CBoardForm.CurrentLabel;
-            label.Text = this.WorkName;
-            label.BackColor = this.Color;
+            label.Text = WorkName;
+            label.BackColor = Color;
         }
         /// <summary>
         /// 일정 삭제 시 기존 일정의 위치 업데이트
@@ -46,7 +46,7 @@ namespace SimplePlanner.Model
             TabPage tab = boardForm.TabControl.SelectedTab;
 
             int i = 0;
-            foreach (var item in tab.Controls)
+            foreach (object item in tab.Controls)
             {
                 if (item is Label tmp)
                 {
