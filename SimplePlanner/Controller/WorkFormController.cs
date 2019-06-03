@@ -57,7 +57,7 @@ namespace SimplePlanner.Controller
             boardForm.CBoardForm.CurrentWork.WorkName = workForm.WorkName;
             boardForm.CBoardForm.CurrentWork.WorkContent = workForm.WorkContent;
             boardForm.CBoardForm.CurrentWork.Color = workForm.colorLabel.BackColor;
-            boardForm.CBoardForm.CurrentWork.Date = workForm.date;
+            boardForm.CBoardForm.CurrentWork.Date = workForm.Date;
 
             if (boardForm.CBoardForm.isLabel)
             {

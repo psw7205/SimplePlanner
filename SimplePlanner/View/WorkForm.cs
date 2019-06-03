@@ -18,7 +18,7 @@ namespace SimplePlanner.View
             set { nameTextBox.Text = value; }
         }
 
-        public DateTime date
+        public DateTime Date
         {
             get { return dateTime.Value; }
             set { dateTime.Value = value; }

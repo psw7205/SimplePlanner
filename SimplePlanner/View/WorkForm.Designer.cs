@@ -38,6 +38,7 @@
             this.colorLabel = new System.Windows.Forms.Label();
             this.colorDialog = new System.Windows.Forms.ColorDialog();
             this.dateTime = new MetroFramework.Controls.MetroDateTime();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.SuspendLayout();
             // 
             // label1
@@ -194,11 +195,25 @@
             this.dateTime.Style = MetroFramework.MetroColorStyle.Black;
             this.dateTime.TabIndex = 8;
             // 
+            // materialLabel1
+            // 
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel1.Location = new System.Drawing.Point(129, 64);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(85, 24);
+            this.materialLabel1.TabIndex = 9;
+            this.materialLabel1.Text = "Due Date";
+            // 
             // WorkForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(368, 495);
+            this.Controls.Add(this.materialLabel1);
             this.Controls.Add(this.dateTime);
             this.Controls.Add(this.colorLabel);
             this.Controls.Add(this.label3);
@@ -230,5 +245,6 @@
         public System.Windows.Forms.Label colorLabel;
         private System.Windows.Forms.ColorDialog colorDialog;
         private MetroFramework.Controls.MetroDateTime dateTime;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
     }
 }

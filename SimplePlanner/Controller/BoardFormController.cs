@@ -86,14 +86,14 @@ namespace SimplePlanner.Controller
             workForm.WorkName = CurrentWork.WorkName;
             workForm.WorkContent = CurrentWork.WorkContent;
             workForm.colorLabel.BackColor = CurrentWork.Color;
-            workForm.date = CurrentWork.Date;
+            workForm.Date = CurrentWork.Date;
 
             workForm.ShowDialog();
 
             CurrentWork.WorkName = workForm.WorkName = "";
             CurrentWork.WorkContent = workForm.WorkContent = "";
             CurrentWork.Color = workForm.colorLabel.BackColor = System.Drawing.Color.White;
-            CurrentWork.Date = workForm.date = DateTime.Today;
+            CurrentWork.Date = workForm.Date = DateTime.Today;
         }
 
 
