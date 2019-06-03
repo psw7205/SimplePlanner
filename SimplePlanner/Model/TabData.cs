@@ -80,5 +80,6 @@ namespace SimplePlanner.Model
 
             tabPage.Controls.Add(newWork);
         }
+
     }
 }

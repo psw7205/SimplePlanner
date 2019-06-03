@@ -12,7 +12,7 @@ namespace SimplePlanner.Model
         public int MyID;
         public bool IsClicked;
         public System.Drawing.Color Color;
-        public DateTime date;
+        public DateTime Date;
 
         public WorkData(string _name = "", string _content = "")
         {
@@ -22,7 +22,7 @@ namespace SimplePlanner.Model
             Color = Color.White;
             ID++;
             IsClicked = false;
-            date = DateTime.Today;
+            Date = DateTime.Today;
         }
 
         public string WorkName { get; set; }

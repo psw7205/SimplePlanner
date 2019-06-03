@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="SimplePlanner.Controller.BoardFormController">
-    <Position X="0.5" Y="4" Width="1.5" />
+    <Position X="0.5" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AQAAAAAAAAAABAAEACABACJAgAQACAAAIAADACAAAAA=</HashCode>
       <FileName>Controller\BoardFormController.cs</FileName>
@@ -15,14 +15,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SimplePlanner.Controller.TabEditFormController">
-    <Position X="4" Y="4" Width="1.5" />
+    <Position X="4" Y="4.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAQAAAAAAAAAAAAAAAAAQAAAAAAAIAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
       <FileName>Controller\TabEditFormController.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SimplePlanner.Controller.WorkFormController">
-    <Position X="2.25" Y="4" Width="1.5" />
+    <Position X="2.25" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAACAAAAAABAAAAAAQAAAAAAAAAAAAAAEA=</HashCode>
       <FileName>Controller\WorkFormController.cs</FileName>
@@ -38,14 +38,14 @@
   <Class Name="SimplePlanner.Model.TabData">
     <Position X="2.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAECAA=</HashCode>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAEAAQAAAAAAAAAAAAAECAA=</HashCode>
       <FileName>Model\TabData.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SimplePlanner.Model.WorkData">
     <Position X="4" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAACAAAgAAAgAAAAAABAAAAAACAAABgAEAAAAA=</HashCode>
+      <HashCode>AAAAAAAACAAAgAAAgAAAAAABAAAAAACAAABggUAAAAA=</HashCode>
       <FileName>Model\WorkData.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -77,7 +77,7 @@
       <Field Name="textBox" Hidden="true" />
     </Members>
     <TypeIdentifier>
-      <HashCode>AAAAQAAAACAAABACAACAEAACAAACAAAAAAAQQAAAAAA=</HashCode>
+      <HashCode>AAAAQAAAACAAABACAACAAAACAAACAAAAAAAQAAAAAAA=</HashCode>
       <FileName>View\TabEditForm.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -85,17 +85,14 @@
     <Position X="7.75" Y="0.5" Width="1.5" />
     <Members>
       <Field Name="components" Hidden="true" />
-      <Field Name="ContentTextBox" Hidden="true" />
-      <Field Name="DelBtn" Hidden="true" />
       <Method Name="Dispose" Hidden="true" />
       <Method Name="InitializeComponent" Hidden="true" />
       <Field Name="label1" Hidden="true" />
       <Field Name="label2" Hidden="true" />
-      <Field Name="NameTextBox" Hidden="true" />
       <Field Name="OK" Hidden="true" />
     </Members>
     <TypeIdentifier>
-      <HashCode>EAAAAAAAACAAABAAgACAAAACBAACAAACIAABQEAAAAA=</HashCode>
+      <HashCode>AAAAAAIAACBAABACgICAAAACBAACAAAAAAABSXAAAAA=</HashCode>
       <FileName>View\WorkForm.cs</FileName>
     </TypeIdentifier>
   </Class>
