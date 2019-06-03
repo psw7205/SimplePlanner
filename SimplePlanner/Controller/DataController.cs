@@ -25,10 +25,10 @@ namespace SimplePlanner.Controller
             BoardData board = BoardForm.CBoardForm.BoardData;
 
             int i = 0, j = 0;
-            foreach (TabData tab in board.Tabs)
+            foreach (var tab in board.Tabs)
             {
                 BoardForm.CBoardForm.BoardData.AddTab(BoardForm, tab.TabName);
-                foreach (WorkData item in tab.Works)
+                foreach (var item in tab.Works)
                 {
                     BoardForm.CBoardForm.BoardData.Tabs[i].InitWorkLabel(BoardForm, item, j);
                     j++;

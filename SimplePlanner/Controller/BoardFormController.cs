@@ -1,6 +1,7 @@
 ﻿using SimplePlanner.Model;
 using SimplePlanner.View;
 using System;
+using System.Drawing;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
@@ -9,8 +10,8 @@ namespace SimplePlanner.Controller
 {
     public class BoardFormController
     {
-        private readonly BoardForm boardForm;
-        private readonly WorkForm workForm;
+        readonly BoardForm boardForm;
+        readonly WorkForm workForm;
 
         /// <summary>
         /// 관리할 데이터
@@ -69,7 +70,7 @@ namespace SimplePlanner.Controller
                 int tabIndex = boardForm.TabControl.SelectedIndex;
                 TabData tabData = BoardData.Tabs.ElementAt(tabIndex);
 
-                foreach (WorkData item in tabData.Works)
+                foreach (var item in tabData.Works)
                 {
                     if (item.MyID == CurrentWorkIndex)
                     {
@@ -175,7 +176,7 @@ namespace SimplePlanner.Controller
             int tabIndex = boardForm.TabControl.SelectedIndex;
             TabData tabData = BoardData.Tabs.ElementAt(tabIndex);
 
-            foreach (WorkData item in tabData.Works)
+            foreach (var item in tabData.Works)
             {
                 if (item.MyID == CurrentWorkIndex)
                 {

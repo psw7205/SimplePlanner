@@ -5,8 +5,8 @@ namespace SimplePlanner.Controller
 {
     public class WorkFormController
     {
-        private readonly BoardForm boardForm;
-        private readonly WorkForm workForm;
+        readonly BoardForm boardForm;
+        readonly WorkForm workForm;
 
         /// <summary>
         /// 컨트롤러 생성시 폼 연결
@@ -33,7 +33,7 @@ namespace SimplePlanner.Controller
                 WorkData.DeleteLabel(boardForm);
 
                 WorkData tmp = null;
-                foreach (WorkData item in data.Tabs[tabIdx].Works)
+                foreach (var item in data.Tabs[tabIdx].Works)
                 {
                     if (item.MyID == boardForm.CBoardForm.CurrentWorkIndex)
                     {

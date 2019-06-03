@@ -5,7 +5,7 @@ namespace SimplePlanner.Controller
 {
     public class TabEditFormController
     {
-        private readonly TabEditForm tabEditForm;
+        readonly TabEditForm tabEditForm;
 
         public TabEditFormController(TabEditForm _TabEdit)
         {
@@ -21,9 +21,7 @@ namespace SimplePlanner.Controller
             tabEditForm.NewTabName = "";
             DialogResult result = tabEditForm.ShowDialog();
             if (result.Equals(DialogResult.Cancel))
-            {
                 return "";
-            }
 
             return tabEditForm.NewTabName;
         }

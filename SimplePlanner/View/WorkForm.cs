@@ -6,7 +6,7 @@ namespace SimplePlanner.View
 {
     public partial class WorkForm : Form
     {
-        private WorkFormController CWorkForm;
+        WorkFormController CWorkForm;
         public bool flag;
 
         /// <summary>
@@ -14,14 +14,14 @@ namespace SimplePlanner.View
         /// </summary>
         public string WorkName
         {
-            get => nameTextBox.Text;
-            set => nameTextBox.Text = value;
+            get { return nameTextBox.Text; }
+            set { nameTextBox.Text = value; }
         }
 
         public DateTime date
         {
-            get => dateTime.Value;
-            set => dateTime.Value = value;
+            get { return dateTime.Value; }
+            set { dateTime.Value = value; }
         }
 
         /// <summary>
@@ -29,8 +29,8 @@ namespace SimplePlanner.View
         /// </summary>
         public string WorkContent
         {
-            get => contentTextBox.Text;
-            set => contentTextBox.Text = value;
+            get { return contentTextBox.Text; }
+            set { contentTextBox.Text = value; }
         }
 
         public WorkForm()
@@ -57,7 +57,7 @@ namespace SimplePlanner.View
                 CWorkForm.OKBtnClicked();
             }
 
-            Close();
+            this.Close();
         }
 
         /// <summary>
@@ -76,7 +76,7 @@ namespace SimplePlanner.View
             WorkName = "";
             WorkContent = "";
             dateTime.ResetText();
-            Close();
+            this.Close();
         }
 
         private void ColorLabel_Click(object sender, EventArgs e)

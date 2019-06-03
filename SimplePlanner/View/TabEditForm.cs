@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SimplePlanner.Controller;
+using System;
 using System.Windows.Forms;
 
 namespace SimplePlanner.View
@@ -7,8 +8,8 @@ namespace SimplePlanner.View
     {
         public string NewTabName
         {
-            get => textBox.Text;
-            set => textBox.Text = value;
+            get { return textBox.Text; }
+            set { textBox.Text = value; }
         }
 
         public TabEditForm()
@@ -19,7 +20,7 @@ namespace SimplePlanner.View
 
         private void OKBtn_Click(object sender, EventArgs e)
         {
-            Close();
+            this.Close();
         }
     }
 }
