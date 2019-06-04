@@ -22,7 +22,7 @@ namespace SimplePlanner.Model
 
         public string TabName { get; set; }
         public List<WorkData> Works { get; set; }
-        public int ColCount { get; set; }
+
         /// <summary>
         /// 일정 데이터 추가시 보드 폼에서 일정 라벨 추가
         /// </summary>

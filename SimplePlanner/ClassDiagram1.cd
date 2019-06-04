@@ -38,7 +38,7 @@
   <Class Name="SimplePlanner.Model.TabData">
     <Position X="2.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>CAAAAAAAAAAAAAAAAAAAAAEAAQAAAAAAAAAAAAAECAA=</HashCode>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAECAA=</HashCode>
       <FileName>Model\TabData.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -62,7 +62,7 @@
       <Field Name="tabControl" Hidden="true" />
     </Members>
     <TypeIdentifier>
-      <HashCode>AAAQAAAAwCAAQQgAoACBAAgCBAYEAAACgAIAAACAAAI=</HashCode>
+      <HashCode>AAAAAAAAwCAAQQAEoACBEAgCBAYEAAACgAIAAACAAAI=</HashCode>
       <FileName>View\BoardForm.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -94,6 +94,13 @@
     <TypeIdentifier>
       <HashCode>AEAAAAIAACBAABACgICAAAACBAACAAABAAABSHAAAAA=</HashCode>
       <FileName>View\WorkForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimplePlanner.View.CalendarForm">
+    <Position X="9.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAQAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>View\CalendarForm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="맑은 고딕" Size="9" />
