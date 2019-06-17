@@ -15,12 +15,12 @@ namespace SimplePlanner.Controller
     {
         readonly BoardForm boardForm;
         readonly WorkForm workForm;
-
+        
         /// <summary>
         /// 관리할 데이터
         /// </summary>
         public BoardData BoardData;
-
+        private MoveWorkForm moveWorkForm;//ty
         /// <summary>
         /// 현재 클릭한 일정 정보
         /// </summary>
@@ -98,7 +98,13 @@ namespace SimplePlanner.Controller
             CurrentWork.Color = workForm.colorLabel.BackColor = System.Drawing.Color.White;
             CurrentWork.Date = workForm.Date = DateTime.Today;
         }
+        public void OpneMoveWorkForm() {
+            moveWorkForm = new MoveWorkForm(boardForm.CMoveWorkForm);
+            boardForm.CMoveWorkForm.moveWorkForm = moveWorkForm;
+            boardForm.CMoveWorkForm.selectedTabPage = boardForm.TabControl.SelectedIndex;
 
+            moveWorkForm.ShowDialog();
+        }
 
         /// <summary>
         /// 보드 폼에서 새 탭을 추가하는 경우
@@ -138,7 +144,18 @@ namespace SimplePlanner.Controller
         /// </summary>
         public void MoveBtn()
         {
-            boardForm.TabControl.SelectedTab.Controls.Add(boardForm.CreateWorkBtn);
+            try
+            {
+                boardForm.TabControl.SelectedTab.Controls.Add(boardForm.CreateWorkBtn);
+                boardForm.TabControl.SelectedTab.Controls.Add(boardForm.MoveWorkBtn);
+            }
+            catch (NullReferenceException e) {
+               
+            }
+            finally {
+                
+            }
+            
         }
 
         /// <summary>
@@ -195,3 +212,4 @@ namespace SimplePlanner.Controller
         }
     }
 }
+

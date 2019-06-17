@@ -51,7 +51,7 @@ namespace SimplePlanner.Model
 
             boardForm.TabControl.SelectTab(idx);
         }
-        
+       
         /// <summary>
         /// 탭 이름 변경
         /// </summary>

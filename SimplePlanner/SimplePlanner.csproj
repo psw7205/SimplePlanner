@@ -80,6 +80,7 @@
   <ItemGroup>
     <Compile Include="Controller\BoardFormController.cs" />
     <Compile Include="Controller\DataController.cs" />
+    <Compile Include="Controller\MoveWorkFormController.cs" />
     <Compile Include="Controller\TabEditFormController.cs" />
     <Compile Include="Controller\WorkFormController.cs" />
     <Compile Include="Model\BoardData.cs" />
@@ -98,6 +99,12 @@
     </Compile>
     <Compile Include="View\CalendarForm.Designer.cs">
       <DependentUpon>CalendarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MoveWorkForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MoveWorkForm.Designer.cs">
+      <DependentUpon>MoveWorkForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\TabEditForm.cs">
       <SubType>Form</SubType>
@@ -125,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\CalendarForm.resx">
       <DependentUpon>CalendarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MoveWorkForm.resx">
+      <DependentUpon>MoveWorkForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\TabEditForm.resx">
       <DependentUpon>TabEditForm.cs</DependentUpon>

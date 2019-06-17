@@ -36,6 +36,7 @@ namespace SimplePlanner.Controller
                 j = 0;
                 i++;
             }
+            BoardForm.TabControl.SelectedTab = BoardForm.TabControl.TabPages[0];
         }
 
         /// <summary>

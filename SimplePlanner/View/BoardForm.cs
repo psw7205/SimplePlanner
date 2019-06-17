@@ -15,8 +15,11 @@ namespace SimplePlanner.View
         public WorkFormController CWorkForm;
         public TabEditFormController CTabForm;
         public DataController CData;
+        public MoveWorkFormController CMoveWorkForm;
 
         public Button CreateWorkBtn { get; }
+        //taeyoon
+        public Button MoveWorkBtn { get; }
         
         public TabControl TabControl
         {
@@ -32,6 +35,7 @@ namespace SimplePlanner.View
 
             workForm = new WorkForm();
             tabEditForm = new TabEditForm();
+         
 
             CreateWorkBtn = new Button
             {
@@ -41,18 +45,30 @@ namespace SimplePlanner.View
                 Name = "MakeNewWorkButton",
                 UseVisualStyleBackColor = true
             };
-
             CreateWorkBtn.Click += (s, e) =>
             {
                 CBoardForm.isLabel = false;
                 CBoardForm.OpenWorkForm();
+            };
+            //taeyoon
+            MoveWorkBtn = new Button {
+                Size = new Size(100, 30),
+                Location = new Point(150, 10),
+                Text = "일정 이동",
+                UseVisualStyleBackColor = true
+            };
+            MoveWorkBtn.Click += (s, e) =>
+            {
+
+
+                CBoardForm.OpneMoveWorkForm();
             };
 
             // 폼 생성
             CBoardForm = new BoardFormController(this, workForm);
             CWorkForm = new WorkFormController(this, workForm);
             CTabForm = new TabEditFormController(tabEditForm);
-
+            CMoveWorkForm = new MoveWorkFormController(this);
             // 폼에 컨트롤러 연결
             workForm.Link(CWorkForm);
 
