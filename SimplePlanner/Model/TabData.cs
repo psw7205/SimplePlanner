@@ -16,8 +16,7 @@ namespace SimplePlanner.Model
     {
         public TabData(string _name)
         {
-            ID = new Random();
-            myId = "T"+ID.Next();
+           
             TabName = _name;
             Works = new List<WorkData>();
         }
@@ -25,9 +24,7 @@ namespace SimplePlanner.Model
         public string TabName { get; set; }
         public List<WorkData> Works { get; set; }
         public int ColCount { get; set; }
-        private Random ID;
-        public string myId { get;}
-
+      
         /// <summary>
         /// 일정 데이터 추가시 보드 폼에서 일정 라벨 추가
         /// </summary>
@@ -43,7 +40,7 @@ namespace SimplePlanner.Model
                 Name = "Work" + Works.Last().MyID,
                 Text = Works.Last().WorkName,
                 BackColor = Works.Last().Color,
-                Size = new Size(150, 50),
+                Size = new Size(tabPage.Size.Width - 10, 50),
                 Location = new Point(5, 50 + (70 * (Works.Count - 1))),
                 BorderStyle = BorderStyle.FixedSingle,
                 TextAlign = ContentAlignment.MiddleCenter
@@ -74,7 +71,7 @@ namespace SimplePlanner.Model
                 Name = "Work" + workData.MyID,
                 Text = workData.WorkName,
                 BackColor = workData.Color,
-                Size = new Size(150, 50),
+                Size = new Size(tabPage.Size.Width - 10, 50),
                 Location = new Point(5, 50 + (70 * i)),
                 BorderStyle = BorderStyle.FixedSingle,
                 TextAlign = ContentAlignment.MiddleCenter

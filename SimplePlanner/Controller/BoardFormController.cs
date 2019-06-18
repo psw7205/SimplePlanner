@@ -150,12 +150,8 @@ namespace SimplePlanner.Controller
                 boardForm.TabControl.SelectedTab.Controls.Add(boardForm.MoveWorkBtn);
             }
             catch (NullReferenceException e) {
-               
-            }
-            finally {
-                
-            }
-            
+                  
+            } 
         }
 
         /// <summary>

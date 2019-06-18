@@ -15,6 +15,7 @@ namespace SimplePlanner.View
         MoveWorkFormController moveWorkFormController;
         Label ClickedLabel;
         TabPage target;
+        TabPage nontarget;
 
         public MoveWorkForm(MoveWorkFormController controller) {//structer
             InitializeComponent();
@@ -59,13 +60,21 @@ namespace SimplePlanner.View
             if (tabControl1.SelectedTab.Contains(ClickedLabel))
             {
                 target = tabControl2.SelectedTab;
+                nontarget = tabControl1.SelectedTab; 
             }
             else {
                 target = tabControl1.SelectedTab;
+                nontarget = tabControl2.SelectedTab;
             }
-           
             ClickedLabel.Location = new Point(10, 10+(target.Controls.Count*70));
             target.Controls.Add(ClickedLabel);
+            int i = 0;
+            foreach (Label label in nontarget.Controls) {
+                label.Location = new Point(10,10+(i*70));
+                i++;
+            }
+               
+            
             
         }
        
